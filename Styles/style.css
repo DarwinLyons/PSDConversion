@@ -178,8 +178,3 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden;
 }
-
-body {
-  background: red;
-}
-/*# sourceMappingURL=style.css.map */

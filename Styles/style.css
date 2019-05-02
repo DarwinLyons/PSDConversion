@@ -178,3 +178,288 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.wrapperSmall {
+  width: 90%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.more {
+  font-family: 'Dokdo', cursive;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+.more {
+  color: #fafffe;
+  background: #555f02;
+  padding: 10px;
+}
+
+nav ul li,
+p {
+  font-family: 'Lato', sans-serif;
+  color: #fafffe;
+}
+
+h1,
+h3 {
+  color: #ffc600;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+header {
+  background: url(../assets/candleHeaderBackground.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hamburger {
+  color: #fafffe;
+  position: absolute;
+  top: 0;
+  right: 14%;
+  visibility: hidden;
+  font-size: 2rem;
+}
+
+.headerNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h3 {
+  margin-left: 10%;
+  font-size: 2.05rem;
+}
+
+.menu {
+  margin-right: 10%;
+}
+
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.menu ul li:hover {
+  color: #ffc600;
+}
+
+header p {
+  font-family: 'Dokdo', cursive;
+  color: #fafffe;
+  font-size: 3rem;
+  margin: 0 0 0 10px;
+}
+
+h1 {
+  font-size: 5.75rem;
+  margin: 0 0 0 10px;
+}
+
+.headerMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: -10%;
+}
+
+.headerImg {
+  width: 500px;
+}
+
+.newAdventure {
+  background: #1e140e;
+  padding: 100px;
+}
+
+.newAdventureSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+.newAdventureText {
+  width: 60%;
+}
+
+.newAdventureText p {
+  margin-bottom: 25px;
+}
+
+.newAdventureText h3 {
+  margin: 0 0 40px 0;
+}
+
+.newAdventureImg {
+  width: 30%;
+  position: relative;
+  z-index: 1;
+}
+
+.newAdventureImg::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #555f02;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+}
+
+.gallery {
+  background: #262725;
+  padding: 100px 0;
+  width: 100%;
+}
+
+.gallerySmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.galleryImg {
+  width: calc(33% - 20px);
+  margin-left: 10px;
+}
+
+.galleryImg:nth-of-type(3) {
+  margin: 0;
+}
+
+.furtherReading {
+  background: #1e140e;
+  padding: 100px 0;
+}
+
+.readingSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reading {
+  width: 50%;
+}
+
+.reading h3 {
+  margin: 20px 0;
+}
+
+.readingHeader a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.readingHeader i {
+  color: #fafffe;
+  background: #555f02;
+  border: 10px solid #555f02;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.reading p {
+  margin-left: 60px;
+}
+
+.programsLocations {
+  background: #262725;
+  width: 100%;
+}
+
+.programsLocationsSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.programsImg,
+.programsText,
+.locationsText,
+.locationsImg {
+  width: calc(50% - 100px);
+}

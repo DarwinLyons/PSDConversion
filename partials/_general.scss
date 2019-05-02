@@ -1,0 +1,65 @@
+// General styles for the site
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapperSmall {
+  width: 90%;
+  max-width: 1152px;
+  margin: 0 auto; 
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.more {
+  font-family: 'Dokdo', cursive; 
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+.more {
+  color: $text;
+  background: $buttonAccent;
+  padding: 10px;
+}
+
+nav ul li,
+p {
+  font-family: 'Lato', sans-serif;
+  color: $text;
+}
+
+
+h1,
+h3 {
+  color: $headerText;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}

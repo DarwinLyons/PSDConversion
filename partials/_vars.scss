@@ -3,3 +3,11 @@ $buttonAccent: #555f02;
 $backgroundDark: #262725;
 $backgroundLight: #1e140e;
 $text: #fafffe;
+
+@mixin background($background) {
+  background: $background;
+  background-size: cover;
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}

@@ -32,6 +32,13 @@ img {
 h1,
 h2,
 h3,
+h4 {
+  color: $headerText;
+}
+
+h1,
+h2,
+h3,
 .more {
   font-family: 'Dokdo', cursive; 
 }
@@ -52,11 +59,6 @@ p {
   color: $text;
 }
 
-
-h1,
-h3 {
-  color: $headerText;
-}
 
 img {
   max-width: 100%;

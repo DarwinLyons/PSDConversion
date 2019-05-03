@@ -211,6 +211,13 @@ img {
 h1,
 h2,
 h3,
+h4 {
+  color: #ffc600;
+}
+
+h1,
+h2,
+h3,
 .more {
   font-family: 'Dokdo', cursive;
 }
@@ -231,24 +238,19 @@ p {
   color: #fafffe;
 }
 
-h1,
-h3 {
-  color: #ffc600;
-}
-
 img {
   max-width: 100%;
   width: 100%;
   display: block;
 }
 
-header {
+header.main {
   background: url(../assets/candleHeaderBackground.jpg);
   background-size: cover;
-  min-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  min-height: 100vh;
 }
 
 .hamburger {
@@ -540,4 +542,89 @@ footer h3 {
   text-align: center;
   padding: 10px 0;
   margin: 0;
+}
+
+.blog {
+  background: #1e140e;
+}
+
+header.blog {
+  background: url(../assets/nightYogaBlog.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 75vh;
+}
+
+.blogHeader {
+  font-size: 5.25rem;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+}
+
+.blogMain {
+  background: #1e140e;
+  max-width: 70%;
+  position: relative;
+}
+
+.blogImg {
+  -webkit-box-shadow: 15px 15px #555f02;
+          box-shadow: 15px 15px #555f02;
+}
+
+.blogBorder {
+  border-right: 2px solid #555f02;
+  border-bottom: 2px solid #555f02;
+}
+
+.blogText {
+  padding: 0 20px 20px 0;
+  margin-left: 100px;
+}
+
+.blogText h3 {
+  margin: 50px 0 0 0;
+}
+
+.byLine {
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+.byLine span {
+  font-weight: bold;
+}
+
+.comments {
+  margin-left: 100px;
+}
+
+.comments h3 {
+  color: #fafffe;
+}
+
+.commenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.commenter h4 {
+  font-family: 'Lato', sans-serif;
+}
+
+.commenterText {
+  margin-left: 20px;
+}
+
+.commenterImg {
+  width: 100px;
+  height: 100px;
+}
+
+form {
+  margin-left: 100px;
 }

@@ -45,87 +45,178 @@
 
   // start of gallery styles
 
-  .gallery {
-    background: $backgroundDark;
-    padding: 100px 0;
-    width: 100%;
-  }
+.gallery {
+  background: $backgroundDark;
+  padding: 100px 0;
+  width: 100%;
+}
 
-  .gallerySmall {
-    display: flex;
-    justify-content: space-between;
-  }
+.gallerySmall {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .galleryImg {
-    width: calc(33% - 20px);
-    margin-left: 10px;
-  }
+.galleryImg {
+  width: calc(33% - 20px);
+  margin-left: 10px;
+}
 
-  .galleryImg:nth-of-type(3) {
-    margin: 0;
-  }
+.galleryImg:nth-of-type(3) {
+  margin: 0;
+}
 
   // end of gallery styles
 
   // beginning of further reading styles
 
-  .furtherReading {
-    background: $backgroundLight;
-    padding: 100px 0;
-  }
+.furtherReading {
+  background: $backgroundLight;
+  padding: 100px 0;
+}
 
-  .readingSmall {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.readingSmall {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .reading {
-    width: 50%;
-  }
+.reading {
+  width: 50%;
+}
 
-  .reading h3 {
-    margin: 20px 0;
-  }
+.reading h3 {
+  margin: 20px 0;
+}
 
-  .readingHeader a {
-    display: flex;
-    align-items: center;
-  }
+.readingHeader a {
+  display: flex;
+  align-items: center;
+}
 
-  .readingHeader i {
-    color: $text;
-    background: $buttonAccent;
-    border: 10px solid $buttonAccent;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
+.readingHeader i {
+  color: $text;
+  background: $buttonAccent;
+  border: 10px solid $buttonAccent;
+  border-radius: 50%;
+  margin-right: 20px;
+}
 
-  .reading p {
-    margin-left: 60px;
-  }
+.reading p {
+  margin-left: 60px;
+}
 
   // end of further reading
   
   // start of programsLocations
 
-  .programsLocations {
-    background: $backgroundDark;
-    width: 100%;
-  }
+.programsLocations {
+  background: $backgroundDark;
+  position: relative;
+  height: 900px;
+}
 
-  .programsLocationsSmall {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+.programs,
+.locations {
+  display: flex;
+}
 
-  .programsImg,
-  .programsText,
-  .locationsText,
-  .locationsImg {
-    width: calc(50% - 100px);
-  }
+.programs {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  margin-bottom: 40px;
+}
 
+.locations {
+  position: absolute;
+  bottom: -5%;
+  right: 0;
+}
+
+.programsImg,
+.programsText,
+.locationsText,
+.locationsImg {
+  width: 50%;
+} 
+
+.programsLocations p {
+  margin-bottom: 40px;
+}
+
+.programsText {
+  padding: 50px 55px 0 100px;
+}
+
+.locationsText {
+  padding: 30px 60px 0 50px; 
+}
+
+.locations h3,
+.locations a {
+  text-align: right;  
+}
+
+.programsImg {
+  position: relative;
+  z-index: 1;
+}
+
+.programsImg::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: $headerText;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  right: -15px;
+}
+
+.locationsImg {
+  position: relative;
+  z-index: 1;
+}
+
+.locationsImg::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: $headerText;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+}
+
+// end of locations programs styles
+
+// beginning of footer styles
+
+footer {
+  background: $backgroundLight;
+}
+
+.footerText {
+  text-align: center;
+  padding: 100px 0;
+}
+
+footer h3 {
+  margin: 20px 0;
+}
+
+// margin is not moving link
+
+// footer a .more {
+//   margin: 20px 0;
+// }
+  
+.copywrite {
+  background: $backgroundDark;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
 
 
 

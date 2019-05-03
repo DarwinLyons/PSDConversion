@@ -442,24 +442,102 @@ h1 {
 
 .programsLocations {
   background: #262725;
-  width: 100%;
+  position: relative;
+  height: 900px;
 }
 
-.programsLocationsSmall {
+.programs,
+.locations {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+
+.programs {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  margin-bottom: 40px;
+}
+
+.locations {
+  position: absolute;
+  bottom: -5%;
+  right: 0;
 }
 
 .programsImg,
 .programsText,
 .locationsText,
 .locationsImg {
-  width: calc(50% - 100px);
+  width: 50%;
+}
+
+.programsLocations p {
+  margin-bottom: 40px;
+}
+
+.programsText {
+  padding: 50px 55px 0 100px;
+}
+
+.locationsText {
+  padding: 30px 60px 0 50px;
+}
+
+.locations h3,
+.locations a {
+  text-align: right;
+}
+
+.programsImg {
+  position: relative;
+  z-index: 1;
+}
+
+.programsImg::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #ffc600;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  right: -15px;
+}
+
+.locationsImg {
+  position: relative;
+  z-index: 1;
+}
+
+.locationsImg::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #ffc600;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: -15px;
+}
+
+footer {
+  background: #1e140e;
+}
+
+.footerText {
+  text-align: center;
+  padding: 100px 0;
+}
+
+footer h3 {
+  margin: 20px 0;
+}
+
+.copywrite {
+  background: #262725;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
 }

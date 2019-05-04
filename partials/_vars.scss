@@ -12,13 +12,13 @@ $text: #fafffe;
   position: relative;
 }
 
-// @mixin after($color, $top, $left) {
-//   content: "";
-//   height: 100%;
-//   width: 100%;
-//   background-color: $color;
-//   z-index: -1;
-//   position: absolute;
-//   top: $top;
-//   left: $left;
-// }
+@mixin after($color, $top, $left) {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: $color;
+  z-index: -1;
+  position: absolute;
+  top: $top;
+  left: $left;
+}

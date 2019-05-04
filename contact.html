@@ -8,9 +8,92 @@
   <link href="https://fonts.googleapis.com/css?family=Dokdo|Lato:300,400,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="Styles/style.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
-<body>
+<body class="contact">
   
-</body>
+  <header class="contact wrapper">
+    <div class="headerNav">
+      <h3>Mindn'Soul</h3>
+      <p class="hamburger"><i class="fas fa-bars" title="link to the main menu"></i></p>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav><!-- menu -->
+    </div><!-- headerNav -->
+    <div class="contactHeader">
+      <h2 class="wrapperSmall">Get in Touch</h2>
+    </div><!-- blogHeader -->
+  </header><!-- contact -->
+  <main class="contact">
+    <div class="formAside">
+      <form action="submit" name="contactForm" class="contact wrapper wrapperSmall">
+        <div class="nameEmail">
+          <div class="name">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required="true">
+          </div><!-- name -->
+          <div class="email">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" required="true">
+          </div><!-- email -->
+        </div><!-- nameEmail -->
+        <textarea cols="50" rows="10" maxlength="500" placeholder="Message" required="true"></textarea>
+        <button class="more">Submit</button>
+      </form>
+      <aside class="contact wrapper wrapperSmall">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f" aria-hidden="true" title="Link to our facebook">
+                  <span class="sr-only">Link to our facebook</span>
+                </i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram" aria-hidden="true" title="Link to our instagram">
+                  <span class="sr-only">Link to our instagram</span>
+                </i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter" aria-hidden="true" title="Link to our twitter">
+                  <span class="sr-only">Link to our twitter</span>
+                </i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="far fa-comment" aria-hidden="true" title="Link to our phone number">
+                  <!-- find real icon -->
+                  <span class="sr-only">Link to our phone number</span>
+                </i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contactInfo">
+          <p>info@email.com</p>
+          <p>123-456-7890</p>
+          <p>123 Queen Street West</p>
+          <p>Unit 10</p>
+          <p>Toronto, Ontario</p>
+          <p>M5V2D5</p>
+        </div>
+        
+      </aside>
+    </div><!-- formAside -->
+  </main>
+  <footer>
+    <p class="copywrite">Copywrite &copy 2019 Hacker You</p>
+  </footer>
+  
+</body><!-- contact -->
 </html>

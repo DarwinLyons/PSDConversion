@@ -1,4 +1,11 @@
+// styles for the blog page
+
 // header blog styles
+
+main.blog {
+  display: flex;
+  justify-content: space-between;
+}
 
 .blog {
   background: $backgroundLight;
@@ -100,12 +107,13 @@ form {
 }
 
 .blog input,
-textarea {
+.blog textarea {
   background: $backgroundLight;
   color: $text;
   // border: $backgroundLight;
 }
 
+// also styles form on contact page
 .nameEmail {
   display: flex;
 }
@@ -127,14 +135,15 @@ textarea {
   margin-right: 40px;
 }
 
-input[type="email"],
-input[type="text"] {
+.blog input[type="email"],
+.blog input[type="text"] {
   border-top: $backgroundLight;
   border-left: $backgroundLight;
   border-right: $backgroundLight;
   border-bottom: 2px solid $headerText;
 }
 
+// also styles contact textarea
 textarea {
   border: 2px solid $headerText;
   padding: 40px;
@@ -153,15 +162,29 @@ textarea::placeholder {
 
 // aside styles
 
-aside {
+.blog aside {
   display: flex;
   flex-direction: column;
   width: 20%;
   color: $text;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
   h5 {
     font-family: 'Dokdo', cursive;
     font-size: 2rem;
   }
+}
+
+.blog aside::after {
+  content: "";
+  height: 45%;
+  width: 110%;
+  background-color: $buttonAccent;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: -30px;
 }
 
 aside p {
@@ -174,7 +197,7 @@ aside p {
 
 .asideLinks li {
     padding-left: 20px;
-    list-style: disc;
+    font-family: 'Lato', sans-serif;
 }
 
 .asideLinks li::before {
@@ -182,6 +205,5 @@ aside p {
   color: $headerText;
 }
 
-// not rendering font???
 
 

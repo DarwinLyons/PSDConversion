@@ -545,6 +545,15 @@ footer h3 {
   margin: 0 auto;
 }
 
+main.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .blog {
   background: #1e140e;
 }
@@ -651,7 +660,7 @@ form {
 }
 
 .blog input,
-textarea {
+.blog textarea {
   background: #1e140e;
   color: #fafffe;
 }
@@ -684,8 +693,8 @@ textarea {
   margin-right: 40px;
 }
 
-input[type="email"],
-input[type="text"] {
+.blog input[type="email"],
+.blog input[type="text"] {
   border-top: #1e140e;
   border-left: #1e140e;
   border-right: #1e140e;
@@ -723,7 +732,7 @@ textarea::placeholder {
   margin-bottom: 100px;
 }
 
-aside {
+.blog aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -733,11 +742,25 @@ aside {
           flex-direction: column;
   width: 20%;
   color: #fafffe;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
 }
 
-aside h5 {
+.blog aside h5 {
   font-family: 'Dokdo', cursive;
   font-size: 2rem;
+}
+
+.blog aside::after {
+  content: "";
+  height: 45%;
+  width: 110%;
+  background-color: #555f02;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: -30px;
 }
 
 aside p {
@@ -750,10 +773,100 @@ aside p {
 
 .asideLinks li {
   padding-left: 20px;
-  list-style: disc;
+  font-family: 'Lato', sans-serif;
 }
 
 .asideLinks li::before {
   content: "•";
   color: #ffc600;
+}
+
+body.contact {
+  background: #1e140e;
+}
+
+main.contact {
+  padding: 100px 0;
+}
+
+header.contact {
+  background: url(../assets/contactBackgroundMountains.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -2;
+  min-height: 75vh;
+}
+
+header.contact h2 {
+  font-size: 5.25rem;
+}
+
+.formAside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form.contact {
+  background: #262725;
+  width: 70%;
+  padding: 50px 50px 25px 50px;
+  position: relative;
+  top: -250px;
+  left: 0;
+}
+
+form.contact::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #ffc600;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.contact input,
+.contact textarea {
+  background: #262725;
+  color: #fafffe;
+}
+
+.contact input[type="text"],
+.contact input[type="email"] {
+  border-top: #262725;
+  border-left: #262725;
+  border-right: #262725;
+  border-bottom: 2px solid #ffc600;
+}
+
+.contact button {
+  border: #555f02;
+}
+
+aside.contact {
+  width: 15%;
+}
+
+aside.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+aside.contact ul li {
+  padding-right: 20px;
+  color: #ffc600;
+}
+
+aside.contact p {
+  margin: 0;
+}
+
+aside.contact p:nth-of-type(1) {
+  margin: 10px 0 20px 0;
 }

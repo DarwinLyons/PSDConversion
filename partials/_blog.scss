@@ -19,12 +19,29 @@ header.blog {
 .blogMain {
   background: $backgroundLight;
   max-width: 70%;
-  position: relative;
 }
 
 .blogImg {
-  box-shadow: 15px 15px $buttonAccent;
+  position: relative;
+  top: -50px;
+  left: -12px;
+  z-index: 1;
 }
+
+.blogImg::after {
+  content: "";
+  height: 100%;
+  width: 98%;
+  background-color: $buttonAccent;
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: 31px;
+}
+
+// .blogImg::after {
+//   @include after($buttonAccent -15px -15px)
+// }
 
 .blogBorder {
   border-right: 2px solid $buttonAccent;
@@ -73,7 +90,98 @@ header.blog {
   height: 100px;
 }
 
+// form styles
+
 form {
   margin-left: 100px;
+  color: $text;
+  display: flex;
+  flex-direction: column;
 }
+
+.blog input,
+textarea {
+  background: $backgroundLight;
+  color: $text;
+  // border: $backgroundLight;
+}
+
+.nameEmail {
+  display: flex;
+}
+
+.name,
+.email {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.name label,
+.email label {
+  padding-left: 30px;
+}
+
+.name {
+  margin-right: 40px;
+}
+
+input[type="email"],
+input[type="text"] {
+  border-top: $backgroundLight;
+  border-left: $backgroundLight;
+  border-right: $backgroundLight;
+  border-bottom: 2px solid $headerText;
+}
+
+textarea {
+  border: 2px solid $headerText;
+  padding: 40px;
+  margin: 50px 0;
+}
+
+textarea::placeholder {
+  color: $text;
+  opacity: 1;
+}
+
+.blog button {
+  border: $buttonAccent;
+  margin-bottom: 100px;
+}
+
+// aside styles
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  color: $text;
+  h5 {
+    font-family: 'Dokdo', cursive;
+    font-size: 2rem;
+  }
+}
+
+aside p {
+  font-family: 'Lato', sans-serif;
+}
+
+.asideLinks ul {
+  padding: 0;
+  }
+
+.asideLinks li {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.asideLinks li::before {
+  content: "•"; 
+  color: $headerText;
+}
+
+// not rendering font???
+
 

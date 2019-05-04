@@ -37,14 +37,14 @@
         <img src="assets/gongBlog.jpg" alt="A large gold gong.">
       </div><!-- .blogImg -->
     
-      <div class="blogText">
+      <article class="blogText">
         <h3>Come and discover our space</h3>
         <p class="byLine">Monday May 5th, 2019 by <span>Saron</span></p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde cumque minus, molestiae repudiandae, eius culpa consectetur nobis sit non excepturi dolorum perferendis sed consequuntur numquam, neque rerum commodi cum deleniti nisi saepe exercitationem iste laudantium.</p>
         <p class="mobileHide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident et corrupti temporibus quis. Nulla amet iure architecto? Illum voluptate cum asperiores ad incidunt reprehenderit. Unde fuga quo dicta eius perspiciatis fugit, sint amet molestias, omnis facilis sed, voluptatum placeat non provident quos. Eius, iure!</p>
         <p class="mobileHide">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, aspernatur doloremque illum facere saepe omnis dolorum officiis accusantium expedita ab consectetur autem culpa quam iusto ducimus. Itaque, fuga? Inventore reiciendis porro exercitationem hic aspernatur cumque sapiente repudiandae dolore nam. Voluptatibus dolores placeat beatae tempore minima repellendus suscipit veniam sapiente ipsam.</p>
         <p class="mobileHide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error doloribus, nam ipsa assumenda magnam ratione?</p>      
-      </div><!-- blogText -->
+      </article><!-- blogText -->
     </div><!-- blogBorder -->
     <div class="comments">
       <h3>Comments:</h3>
@@ -72,12 +72,18 @@
 
     </div><!-- comments -->
     <form action="submit" name="commentForm">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required="true">
-      <label for="email">Email address</label>
-      <input type="email" id="email" name="email" required="true">
+      <div class="nameEmail">
+        <div class="name">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required="true">
+        </div><!-- name -->
+        <div class="email">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required="true">
+        </div><!-- email -->
+      </div><!-- nameEmail -->
       <textarea  cols="50" rows="10" maxlength="500" placeholder="Comment" required="true"></textarea>
-      <button>Post Comment</button>
+      <button class="more">Post Comment</button>
     </form>
   </div><!-- blog blogMain wrapper -->
     <aside class="blog">

@@ -295,6 +295,36 @@ footer h3 {
     flex-direction: column;
   }
 
+  .locationsImg,
+  .programsImg {
+    position: static;
+  }
+
+  .locationsImg::after,
+  .programsImg::after {
+    height: 0;
+    width: 0;
+  }
+
+  .programsImg {
+    order: 1;
+    border: 15px solid $headerText;
+  } 
+
+  .programsText {
+    order: 2;
+    padding-bottom: 50px;
+  }
+
+  .locationsImg {
+    order: 1;
+    border: 15px solid $headerText;
+  }
+
+  .locationsText {
+    order: 2;
+  }
+
   .programsText,
   .locationsText {
     text-align: center;
@@ -316,11 +346,11 @@ footer h3 {
     padding: 50px;
   }
   .newAdventureImg {
-    width: 90%;
+    width: 100%;
   }
 
   .galleryImg {
-    width: 90%;
+    width: 100%;
   }
 
   .furtherReading {
@@ -343,12 +373,18 @@ footer h3 {
     display: none;
   }
 
+  .newAdventureImg {
+    border: 15px solid $buttonAccent;
+  }
+
+  .galleryImg {
+    border: 15px solid $headerText;
+  }
+
   .newAdventureImg::after,
   .galleryImg::after {
-    height: 120%;
-    width: 120%;
-    top: -10%;
-    left: -10%;
+    height: 0;
+    width: 0;
   }
 
 }

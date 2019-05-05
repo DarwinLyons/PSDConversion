@@ -32,10 +32,12 @@ form.contact {
   position: relative;
   top: -250px;
   left: 0;
+  // z-index: 2;
 }
 
 form.contact::after {
-  @include after($headerText, 15px, 15px)
+  @include after($headerText, 15px, 15px);
+  // z-index: 1;
 }
 
 .contact input,
@@ -79,3 +81,114 @@ aside.contact p {
 aside.contact p:nth-of-type(1) {
   margin: 10px 0 20px 0;
 }
+
+// start of responsive styles
+
+@media (max-width: 1020px) {
+
+  .formAside {
+    flex-direction: column;
+    // position: relative;
+    // top: -550px;
+  }
+  aside.contact {
+    position: relative;
+    top: -225px;
+    ul {
+    align-items: center;
+    }
+  }
+}
+
+@media (max-width: 755px) {
+  main.contact {
+    padding: 50px 0;
+  }
+
+  header.contact {
+    min-height: 50vh;
+  }
+
+  form.contact,
+  aside.contact {
+    top: 0;
+  }
+
+  aside.contact {
+    margin-top: 50px;
+    width: 25%;
+  }
+
+  .contact .nameEmail {
+  flex-direction: column;
+  }
+
+  .contact .name,
+  .contact .email {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 650px) {
+  header.contact h2 {
+    font-size: 4.5rem;
+  }
+
+  aside.contact {
+    margin-top: 50px;
+    width: 35%;
+  }
+
+}
+
+@media (max-width: 550px) {
+  header.contact h2 {
+    font-size: 4rem;
+  }
+
+  form.contact {
+    width: 90%;
+    padding: 25px 25px 10px 25px;
+  }
+  aside.contact {
+    width: 40%;
+  }
+
+}
+
+@media (max-width: 485px) {
+  header.contact h2 {
+    font-size: 3.5rem;
+  }
+}
+  
+@media (max-width: 415px) {
+  header.contact h2 {
+    font-size: 3rem;
+  }
+
+  form.contact {
+    border: 15px solid $headerText;
+    margin: 0 15px;
+  }
+
+  form.contact::after {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  header.contact h2 {
+    font-size: 2.5rem;
+  }
+  aside.contact {
+    width: 80%;
+  }
+}
+  
+
+
+

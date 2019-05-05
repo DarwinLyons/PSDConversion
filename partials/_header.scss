@@ -130,7 +130,7 @@ h1 {
 
 @media (max-width: 410px) {
   .headerImg {
-    display: none;
+    visibility: hidden
   }
   h1 {
     font-size: 3.5rem;

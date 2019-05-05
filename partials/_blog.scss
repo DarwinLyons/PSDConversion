@@ -35,20 +35,21 @@ header.blog {
   z-index: 1;
 }
 
-.blogImg::after {
-  content: "";
-  height: 100%;
-  width: 98%;
-  background-color: $buttonAccent;
-  z-index: -1;
-  position: absolute;
-  top: 15px;
-  left: 31px;
-}
-
 // .blogImg::after {
-//   @include after($buttonAccent -15px -15px)
+//   content: "";
+//   height: 100%;
+//   width: 98%;
+//   background-color: $buttonAccent;
+//   z-index: -1;
+//   position: absolute;
+//   top: 15px;
+//   left: 31px;
 // }
+
+.blogImg::after {
+  @include after($buttonAccent, 15px, 31px);
+  width: 98%;
+}
 
 .blogBorder {
   border-right: 2px solid $buttonAccent;
@@ -110,7 +111,6 @@ form {
 .blog textarea {
   background: $backgroundLight;
   color: $text;
-  // border: $backgroundLight;
 }
 
 // also styles form on contact page
@@ -177,14 +177,9 @@ textarea::placeholder {
 }
 
 .blog aside::after {
-  content: "";
+  @include after ($buttonAccent, 15px, -30px);
   height: 45%;
   width: 110%;
-  background-color: $buttonAccent;
-  z-index: -1;
-  position: absolute;
-  top: 15px;
-  left: -30px;
 }
 
 aside p {
@@ -198,6 +193,9 @@ aside p {
 .asideLinks li {
     padding-left: 20px;
     font-family: 'Lato', sans-serif;
+    &:hover {
+      color: $headerText;
+    }
 }
 
 .asideLinks li::before {
@@ -205,5 +203,159 @@ aside p {
   color: $headerText;
 }
 
+// start of responsive styles
 
 
+
+@media (max-width: 1070px) {
+  header.blog {
+    background-position: 50% 50%;
+  }
+
+  .blogImg::after {
+  left: 28px;
+}
+}
+
+@media (max-width: 880px) {
+  main.blog {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}  
+  .blogImg::after {
+    width: 0;
+    height: 0;
+  }
+
+  .blogImg {
+    border: 17px solid $buttonAccent;
+    left: 0;
+  }
+
+  .blogBorder {
+    border: 2px solid $buttonAccent;
+  }
+
+  .blogText {
+    margin: 0 50px;
+  }
+
+  .comments {
+    margin-left: 0;
+  }
+
+  .blog form {
+    margin-left: 0;
+  }
+
+  .blog button {
+    margin-bottom: 50px;
+  }
+
+  .blog aside {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .blog aside::after {
+    height: 100%;
+    width: 105%;
+  }
+
+  .blog aside p,
+  .blog aside li {
+    width: 90%;
+  }
+
+
+
+}
+
+@media (max-width: 580px) {
+  header.blog {
+    background-position: 60% 50%;
+  }
+}
+
+@media (max-width: 485px) {
+
+  .blog h3 {
+    margin-top: 0;
+  }
+
+  .blogText {
+    margin: 0 20px;
+  }
+
+  .blog aside h5 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+
+  .nameEmail {
+  flex-direction: column;
+  }
+
+  .name,
+  .email {
+    width: 100%;
+    text-align: center;
+  }
+
+  .name label,
+  .email label {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+
+}
+
+
+@media (max-width: 410px) {
+  .blogHeader {
+    top: -20%;
+    left: 10%;
+  }
+  .blog .headerNav h3,
+  .contact .headerNav h3 {
+    display: block;
+  }
+  .blogHeader {
+  font-size: 4.5rem;
+  top: 5%;
+}
+
+}
+
+
+  
+
+
+@media (max-width: 380px) {
+  header.blog {
+    background-position: 70% 60%;
+  }
+
+  .blogHeader {
+    font-size: 4rem;
+    top: 15%;
+    left: 20%;
+  }
+
+  .blogText h3 {
+    font-size: 2rem;
+  }
+
+  .blog aside::after {
+    width: 130%;
+    height: 100%;
+    top: -15px;
+  }
+
+  .blog aside li {
+    padding-left: 5px;
+  }
+
+}

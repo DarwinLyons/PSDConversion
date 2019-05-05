@@ -391,7 +391,7 @@ h1 {
 
 @media (max-width: 410px) {
   .headerImg {
-    display: none;
+    visibility: hidden;
   }
   h1 {
     font-size: 3.5rem;
@@ -857,12 +857,13 @@ header.blog {
 .blogImg::after {
   content: "";
   height: 100%;
-  width: 98%;
+  width: 100%;
   background-color: #555f02;
   z-index: -1;
   position: absolute;
   top: 15px;
   left: 31px;
+  width: 98%;
 }
 
 .blogBorder {
@@ -1022,13 +1023,15 @@ textarea::placeholder {
 
 .blog aside::after {
   content: "";
-  height: 45%;
-  width: 110%;
+  height: 100%;
+  width: 100%;
   background-color: #555f02;
   z-index: -1;
   position: absolute;
   top: 15px;
   left: -30px;
+  height: 45%;
+  width: 110%;
 }
 
 aside p {
@@ -1044,9 +1047,144 @@ aside p {
   font-family: 'Lato', sans-serif;
 }
 
+.asideLinks li:hover {
+  color: #ffc600;
+}
+
 .asideLinks li::before {
   content: "•";
   color: #ffc600;
+}
+
+@media (max-width: 1070px) {
+  header.blog {
+    background-position: 50% 50%;
+  }
+  .blogImg::after {
+    left: 28px;
+  }
+}
+
+@media (max-width: 880px) {
+  main.blog {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blogImg::after {
+    width: 0;
+    height: 0;
+  }
+  .blogImg {
+    border: 17px solid #555f02;
+    left: 0;
+  }
+  .blogBorder {
+    border: 2px solid #555f02;
+  }
+  .blogText {
+    margin: 0 50px;
+  }
+  .comments {
+    margin-left: 0;
+  }
+  .blog form {
+    margin-left: 0;
+  }
+  .blog button {
+    margin-bottom: 50px;
+  }
+  .blog aside {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  .blog aside::after {
+    height: 100%;
+    width: 105%;
+  }
+  .blog aside p,
+  .blog aside li {
+    width: 90%;
+  }
+}
+
+@media (max-width: 580px) {
+  header.blog {
+    background-position: 60% 50%;
+  }
+}
+
+@media (max-width: 485px) {
+  .blog h3 {
+    margin-top: 0;
+  }
+  .blogText {
+    margin: 0 20px;
+  }
+  .blog aside h5 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+  .nameEmail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .name,
+  .email {
+    width: 100%;
+    text-align: center;
+  }
+  .name label,
+  .email label {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .blogHeader {
+    top: -20%;
+    left: 10%;
+  }
+  .blog .headerNav h3,
+  .contact .headerNav h3 {
+    display: block;
+  }
+  .blogHeader {
+    font-size: 4.5rem;
+    top: 5%;
+  }
+}
+
+@media (max-width: 380px) {
+  header.blog {
+    background-position: 70% 60%;
+  }
+  .blogHeader {
+    font-size: 4rem;
+    top: 15%;
+    left: 20%;
+  }
+  .blogText h3 {
+    font-size: 2rem;
+  }
+  .blog aside::after {
+    width: 130%;
+    height: 100%;
+    top: -15px;
+  }
+  .blog aside li {
+    padding-left: 5px;
+  }
 }
 
 body.contact {

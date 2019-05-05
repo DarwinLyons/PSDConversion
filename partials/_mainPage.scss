@@ -104,61 +104,58 @@
   margin-left: 60px;
 }
 
-  // end of further reading
+// end of further reading
   
-  // start of programsLocations
+// start of programsLocations
 
 .programsLocations {
   background: $backgroundDark;
-  position: relative;
-  height: 900px;
+}
+
+.programsLocationsSmall {
+  display: flex;
 }
 
 .programs,
 .locations {
   display: flex;
+  flex-direction: column;
 }
 
 .programs {
-  position: absolute;
-  top: -5%;
-  left: 0;
-  margin-bottom: 40px;
+  margin-left: 70px;
 }
 
 .locations {
-  position: absolute;
-  bottom: -5%;
-  right: 0;
+  margin-right: 70px;
+  padding-bottom: 50px;
 }
 
-.programsImg,
-.programsText,
-.locationsText,
-.locationsImg {
-  width: 50%;
-} 
+.programsText {
+  padding-right: 100px;
+}
+
+.locationsText {
+  padding-left: 100px;
+}
 
 .programsLocations p {
   margin-bottom: 40px;
 }
 
-.programsText {
-  padding: 50px 55px 0 100px;
-}
-
-.locationsText {
-  padding: 30px 60px 0 50px; 
-}
-
-.locations h3,
-.locations a {
+.locations h3 {
   text-align: right;  
+}
+
+.locationsText a {
+  margin-left: 70%;
 }
 
 .programsImg {
   position: relative;
   z-index: 1;
+  right: 0;
+  bottom: -10%;
 }
 
 .programsImg::after {
@@ -169,12 +166,14 @@
   z-index: -1;
   position: absolute;
   top: 15px;
-  right: -15px;
+  left: -15px;
 }
 
 .locationsImg {
   position: relative;
   z-index: 1;
+  top: -10%;
+  left: 0;
 }
 
 .locationsImg::after {
@@ -185,7 +184,7 @@
   z-index: -1;
   position: absolute;
   top: 15px;
-  left: -15px;
+  right: -15px;
 }
 
 // end of locations programs styles
@@ -204,18 +203,154 @@ footer {
 footer h3 {
   margin: 20px 0;
 }
-
-// margin is not moving link
-
-// footer a .more {
-//   margin: 20px 0;
-// }
   
 .copywrite {
   background: $backgroundDark;
   text-align: center;
   padding: 10px 0;
   margin: 0 auto;
+}
+
+// start of responsive
+
+@media (max-width: 1170px) {
+  .locationsText a {
+    margin-left: 60%;
+  }
+
+  .programsText,
+  .locationsText {
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  // .wrapperSmall {
+  //   width: 100%;
+  // }
+
+  .newAdventureSmall {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .newAdventureText {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .newAdventureImg {
+    width: 75%;
+  }
+}
+
+@media (max-width: 810px) {
+  .programs {
+    margin-left: 50px;
+  }
+
+.locations {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 760px) {
+  .gallerySmall {
+    flex-direction: column;
+  }
+
+  .galleryImg {
+    width: 100%;
+    margin: 0 0 50px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .galleryImg::after {
+    @include after($headerText, 15px, 15px)
+  }
+
+  .readingSmall {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+
+  .reading {
+    width: 100%;
+  }
+
+  .programs {
+    margin-left: 0px;
+  }
+
+.locations {
+    margin-right: 0px;
+  }
+
+  .programsLocationsSmall {
+    flex-direction: column;
+  }
+
+  .programsText,
+  .locationsText {
+    text-align: center;
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .locationsText a {
+    margin: 0;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+
+  .newAdventure {
+    padding: 50px;
+  }
+  .newAdventureImg {
+    width: 90%;
+  }
+
+  .galleryImg {
+    width: 90%;
+  }
+
+  .furtherReading {
+    padding: 50px 0;
+  }
+
+  .reading h3 {
+    margin: 10px 0;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .newAdventure {
+    padding: 20px;
+  }
+
+  .newAdventureText span {
+    display: none;
+  }
+
+  .newAdventureImg::after,
+  .galleryImg::after {
+    height: 120%;
+    width: 120%;
+    top: -10%;
+    left: -10%;
+  }
+
 }
 
 

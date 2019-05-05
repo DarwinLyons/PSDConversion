@@ -1,4 +1,4 @@
-// header styles
+// header styles and responsive
 
 header.main {
   @include background(url(../assets/candleHeaderBackground.jpg));
@@ -56,13 +56,116 @@ h1 {
 
 .headerMain {
   display: flex;
-  position: absolute;
+  position: relative;
   bottom: -10%;
 }
 
 .headerImg {
   width: 500px;
 }
+
+// start of responsive
+
+@media (min-width: 1500px) {
+  header.main {
+    background-position: 100% 100%;
+    min-height: 75%;
+  }
+}
+
+@media (max-width: 1150px) {
+  header.main {
+    background-position: 40% 0;
+  }
+  .headerMain {
+    bottom: 0;
+  }
+
+}
+
+@media (max-width: 930px) {
+  header.main {
+    background-position: 60% 0;
+    // min-height: 90vh;
+  }
+  .headerMain {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 730px) {
+  header.main {
+    background-position: 80% 0;
+  }
+
+  .headerMain {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .headerImg {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .headerNav {
+    flex-direction: column;
+    text-align: center;
+    h3 {
+      margin: 50px 0 20px 0;
+    }
+  }
+
+  h1 {
+    font-size: 4.25rem;
+  }
+  nav.menu {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .headerImg {
+    display: none;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  header.main {
+    min-height: 75vh;
+  }
+
+  .headerNav h3 {
+    display: none;
+    
+  }
+
+  .headerMain {
+    padding-top: 25%;
+  }
+
+}
+
+@media (max-width: 350px) {
+  header.main {
+    background-position: 90% 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .headerMain {
+    padding-top: 10%;
+  }
+
+}
+
 
 
 

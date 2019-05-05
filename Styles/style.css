@@ -319,12 +319,104 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  position: relative;
   bottom: -10%;
 }
 
 .headerImg {
   width: 500px;
+}
+
+@media (min-width: 1500px) {
+  header.main {
+    background-position: 100% 100%;
+    min-height: 75%;
+  }
+}
+
+@media (max-width: 1150px) {
+  header.main {
+    background-position: 40% 0;
+  }
+  .headerMain {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 930px) {
+  header.main {
+    background-position: 60% 0;
+  }
+  .headerMain {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 730px) {
+  header.main {
+    background-position: 80% 0;
+  }
+  .headerMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .headerImg {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .headerNav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .headerNav h3 {
+    margin: 50px 0 20px 0;
+  }
+  h1 {
+    font-size: 4.25rem;
+  }
+  nav.menu {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .headerImg {
+    display: none;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  header.main {
+    min-height: 75vh;
+  }
+  .headerNav h3 {
+    display: none;
+  }
+  .headerMain {
+    padding-top: 25%;
+  }
+}
+
+@media (max-width: 350px) {
+  header.main {
+    background-position: 90% 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .headerMain {
+    padding-top: 10%;
+  }
 }
 
 .newAdventure {
@@ -445,8 +537,12 @@ h1 {
 
 .programsLocations {
   background: #262725;
-  position: relative;
-  height: 900px;
+}
+
+.programsLocationsSmall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .programs,
@@ -454,48 +550,46 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .programs {
-  position: absolute;
-  top: -5%;
-  left: 0;
-  margin-bottom: 40px;
+  margin-left: 70px;
 }
 
 .locations {
-  position: absolute;
-  bottom: -5%;
-  right: 0;
+  margin-right: 70px;
+  padding-bottom: 50px;
 }
 
-.programsImg,
-.programsText,
-.locationsText,
-.locationsImg {
-  width: 50%;
+.programsText {
+  padding-right: 100px;
+}
+
+.locationsText {
+  padding-left: 100px;
 }
 
 .programsLocations p {
   margin-bottom: 40px;
 }
 
-.programsText {
-  padding: 50px 55px 0 100px;
-}
-
-.locationsText {
-  padding: 30px 60px 0 50px;
-}
-
-.locations h3,
-.locations a {
+.locations h3 {
   text-align: right;
+}
+
+.locationsText a {
+  margin-left: 70%;
 }
 
 .programsImg {
   position: relative;
   z-index: 1;
+  right: 0;
+  bottom: -10%;
 }
 
 .programsImg::after {
@@ -506,12 +600,14 @@ h1 {
   z-index: -1;
   position: absolute;
   top: 15px;
-  right: -15px;
+  left: -15px;
 }
 
 .locationsImg {
   position: relative;
   z-index: 1;
+  top: -10%;
+  left: 0;
 }
 
 .locationsImg::after {
@@ -522,7 +618,7 @@ h1 {
   z-index: -1;
   position: absolute;
   top: 15px;
-  left: -15px;
+  right: -15px;
 }
 
 footer {
@@ -543,6 +639,142 @@ footer h3 {
   text-align: center;
   padding: 10px 0;
   margin: 0 auto;
+}
+
+@media (max-width: 1170px) {
+  .locationsText a {
+    margin-left: 60%;
+  }
+  .programsText,
+  .locationsText {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .newAdventureSmall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .newAdventureText {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .newAdventureImg {
+    width: 75%;
+  }
+}
+
+@media (max-width: 810px) {
+  .programs {
+    margin-left: 50px;
+  }
+  .locations {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 760px) {
+  .gallerySmall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .galleryImg {
+    width: 100%;
+    margin: 0 0 50px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .galleryImg::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #ffc600;
+    z-index: -1;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .readingSmall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+  }
+  .reading {
+    width: 100%;
+  }
+  .programs {
+    margin-left: 0px;
+  }
+  .locations {
+    margin-right: 0px;
+  }
+  .programsLocationsSmall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .programsText,
+  .locationsText {
+    text-align: center;
+  }
+  .programsText h3,
+  .locationsText h3 {
+    text-align: center;
+  }
+  .locationsText a {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .newAdventure {
+    padding: 50px;
+  }
+  .newAdventureImg {
+    width: 90%;
+  }
+  .galleryImg {
+    width: 90%;
+  }
+  .furtherReading {
+    padding: 50px 0;
+  }
+  .reading h3 {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .newAdventure {
+    padding: 20px;
+  }
+  .newAdventureText span {
+    display: none;
+  }
+  .newAdventureImg::after,
+  .galleryImg::after {
+    height: 120%;
+    width: 120%;
+    top: -10%;
+    left: -10%;
+  }
 }
 
 main.blog {
@@ -795,7 +1027,6 @@ header.contact {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  z-index: -2;
   min-height: 75vh;
 }
 

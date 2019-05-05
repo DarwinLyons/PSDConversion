@@ -12,12 +12,12 @@ main.contact {
 
 header.contact {
   @include background(url(../assets/contactBackgroundMountains.jpg)) ;
-  z-index: -2;
   min-height: 75vh;
   h2 {
     font-size: 5.25rem;
   }
 } 
+
 
 // start of contact form styles
 

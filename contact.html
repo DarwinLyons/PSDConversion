@@ -12,10 +12,13 @@
 </head>
 <body class="contact wrapper">
   
-  <header class="contact wrapper">
+  <header class="contact">
     <div class="headerNav">
       <h3>Mindn'Soul</h3>
-      <p class="hamburger"><i class="fas fa-bars" title="link to the main menu"></i></p>
+      <p class="hamburger">
+        <i class="fas fa-bars" title="link to the main menu"></i>
+        <span class="sr-only">Link to main menu</span>
+      </p>
       <nav class="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -46,8 +49,8 @@
           </div><!-- nameEmail -->
           <textarea cols="50" rows="10" maxlength="500" placeholder="Message" required="true"></textarea>
           <button class="more">Submit</button>
-      </form>
-      </div>
+        </form>
+      </div><!-- formWrapper -->
 
       <aside class="contact wrapperSmall">
         <nav>
@@ -75,9 +78,8 @@
             </li>
             <li>
               <a href="#">
-                <i class="far fa-comment" aria-hidden="true" title="Link to our phone number">
-                  <!-- find real icon -->
-                  <span class="sr-only">Link to our phone number</span>
+                <i class="fab fa-whatsapp" aria-hidden="true" title="Link to our whatsapp">
+                  <span class="sr-only">Link to our whatsapp</span>
                 </i>
               </a>
             </li>
@@ -91,13 +93,11 @@
           <p>Toronto, Ontario</p>
           <p>M5V2D5</p>
         </div>
-        
       </aside>
     </div><!-- formAside -->
   </main>
   <footer>
     <p class="copywrite">Copywrite &copy 2019 Hacker You</p>
   </footer>
-  
 </body><!-- contact -->
 </html>

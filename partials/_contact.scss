@@ -1,11 +1,13 @@
 // styles for the contact page
 
-body.contact {
+header.contact,
+main.contact,
+footer.contact {
   background:$backgroundLight;
 }
 
 main.contact {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
 }
 
 // start of contact header styles
@@ -23,21 +25,24 @@ header.contact {
 
 .formAside {
   display: flex;
+  // justify-content: center;
+}
+
+.formWrapper {
+  max-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  width: 70%; 
 }
 
 form.contact {
   background: $backgroundDark;
-  width: 70%;
   padding: 50px 50px 25px 50px;
   position: relative;
-  top: -250px;
+  bottom: 0;
   left: 0;
-  // z-index: 2;
-}
-
-form.contact::after {
-  @include after($headerText, 15px, 15px);
-  // z-index: 1;
+  margin-bottom: 50px;
+  box-shadow: 15px 15px $headerText;
 }
 
 .contact input,
@@ -61,14 +66,14 @@ form.contact::after {
 // aside styles
 
 aside.contact {
-  width: 15%;
+  width: 20%;
 }
 
 aside.contact ul {
   display: flex;
   padding: 0;
   li {
-    padding-right: 20px;
+    padding: 0 10px;
     color: $headerText
   }
 
@@ -84,39 +89,54 @@ aside.contact p:nth-of-type(1) {
 
 // start of responsive styles
 
+@media (min-width: 2500px)
+{
+  header.contact {
+    min-height: 40vh;
+  }
+}
+
 @media (max-width: 1020px) {
+
+  // header.contact {
+  //   min-height: 50vh;
+  // }
+
+  main.contact {
+    padding: 0;
+  }
 
   .formAside {
     flex-direction: column;
-    // position: relative;
-    // top: -550px;
+    padding-top: 50px;
   }
+
+  .formWrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
   aside.contact {
-    position: relative;
-    top: -225px;
-    ul {
+    width: 50%;
     align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0 auto;
+    text-align: center;
+    nav ul {
+    justify-content: center;
     }
+  }
+
+
+  main.contact {
+    max-height: 75%;
   }
 }
 
 @media (max-width: 755px) {
   main.contact {
-    padding: 50px 0;
-  }
-
-  header.contact {
-    min-height: 50vh;
-  }
-
-  form.contact,
-  aside.contact {
-    top: 0;
-  }
-
-  aside.contact {
-    margin-top: 50px;
-    width: 25%;
+    padding: 150px 0;
   }
 
   .contact .nameEmail {
@@ -134,11 +154,6 @@ aside.contact p:nth-of-type(1) {
 @media (max-width: 650px) {
   header.contact h2 {
     font-size: 4.5rem;
-  }
-
-  aside.contact {
-    margin-top: 50px;
-    width: 35%;
   }
 
 }
@@ -172,6 +187,7 @@ aside.contact p:nth-of-type(1) {
   form.contact {
     border: 15px solid $headerText;
     margin: 0 15px;
+    box-shadow: none;
   }
 
   form.contact::after {

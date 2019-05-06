@@ -14,13 +14,14 @@ main.blog {
 header.blog {
   @include background(url(../assets/nightYogaBlog.jpg));
   min-height: 75vh;
+  background-position: 55% 100%;
 }
 
 .blogHeader {
   font-size: 5.25rem;
   position: absolute;
   top: 10%;
-  left: 15%;
+  left:8%;
 }
 
 .blogMain {
@@ -30,28 +31,19 @@ header.blog {
 
 .blogImg {
   position: relative;
+  width: calc(100% - 13px);
   top: -50px;
-  left: -12px;
+  left: 0;
   z-index: 1;
 }
 
-// .blogImg::after {
-//   content: "";
-//   height: 100%;
-//   width: 98%;
-//   background-color: $buttonAccent;
-//   z-index: -1;
-//   position: absolute;
-//   top: 15px;
-//   left: 31px;
-// }
-
 .blogImg::after {
-  @include after($buttonAccent, 15px, 31px);
-  width: 98%;
+  @include after($buttonAccent, 15px, 15px);
+  width: 100%;
 }
 
 .blogBorder {
+  // width: calc(100% + 17px);
   border-right: 2px solid $buttonAccent;
   border-bottom: 2px solid $buttonAccent;
 }
@@ -74,6 +66,8 @@ header.blog {
   font-weight: bold;
 }
 
+// commenter styles
+
 .comments {
   margin-left: 100px;
   h3 {
@@ -84,18 +78,21 @@ header.blog {
 
 .commenter {
   display: flex;
+  align-items: flex-start;
   h4 {
     font-family: 'Lato', sans-serif;
+    margin: 50px 0;
   }
 }
 
 .commenterText {
   margin-left: 20px;
+  width: 90%;
 }
 
 .commenterImg {
-  width: 100px;
-  height: 100px;
+  width: 10%;
+  margin: 50px 0; 
 }
 
 // form styles
@@ -153,6 +150,7 @@ textarea {
 textarea::placeholder {
   color: $text;
   opacity: 1;
+  font-weight: 300; 
 }
 
 .blog button {
@@ -205,7 +203,12 @@ aside p {
 
 // start of responsive styles
 
-
+@media (min-width: 2500px) {
+  header.blog {
+    min-height: 40vh;
+    background-position: 75% 25%;
+  }
+}
 
 @media (max-width: 1070px) {
   header.blog {
@@ -218,6 +221,10 @@ aside p {
 }
 
 @media (max-width: 880px) {
+  .blogHeader {
+    left: 30%;
+  }
+
   main.blog {
   flex-direction: column;
   justify-content: center;
@@ -230,7 +237,8 @@ aside p {
 
   .blogImg {
     border: 17px solid $buttonAccent;
-    left: 0;
+    left: -2px;
+    width: calc(100% + 4px);
   }
 
   .blogBorder {
@@ -243,6 +251,14 @@ aside p {
 
   .comments {
     margin-left: 0;
+  }
+
+  .commenterImg {
+    width: 20%;
+  }
+
+  .commenterText {
+    width: 80%;
   }
 
   .blog form {
@@ -321,10 +337,12 @@ aside p {
   .blog .headerNav h3,
   .contact .headerNav h3 {
     display: block;
+    margin-top: 50px;
+
   }
   .blogHeader {
   font-size: 4.5rem;
-  top: 5%;
+  top: 10%;
 }
 
 }
@@ -346,6 +364,28 @@ aside p {
 
   .blogText h3 {
     font-size: 2rem;
+  }
+
+  .comments h3 {
+    margin: 10px 0;
+  }
+
+  .commenter {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      margin: 10px 0;
+    }
+  }
+
+  .commenterImg {
+    margin: 0;
+    width: 50%;
+  }
+
+  .commenterText {
+    width: 100%;
   }
 
   .blog aside::after {

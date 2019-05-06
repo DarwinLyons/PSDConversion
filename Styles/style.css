@@ -231,6 +231,7 @@ h3 {
   color: #fafffe;
   background: #555f02;
   padding: 10px;
+  font-size: 1.5rem;
 }
 
 nav ul li,
@@ -261,6 +262,7 @@ header.main {
   right: 14%;
   visibility: hidden;
   font-size: 2rem;
+  padding: 10px;
 }
 
 .headerNav {
@@ -390,11 +392,22 @@ h1 {
 }
 
 @media (max-width: 410px) {
+  header.main {
+    background-position: 90% 0;
+  }
+  .headerMain {
+    padding-top: 0;
+  }
   .headerImg {
     visibility: hidden;
   }
   h1 {
     font-size: 3.5rem;
+  }
+  .headerText {
+    position: relative;
+    top: -215px;
+    left: 0;
   }
   header.main {
     min-height: 75vh;
@@ -402,15 +415,15 @@ h1 {
   .headerNav h3 {
     display: none;
   }
-  .headerMain {
-    padding-top: 25%;
+  .menu {
+    display: none;
+  }
+  .hamburger {
+    visibility: visible;
   }
 }
 
 @media (max-width: 350px) {
-  header.main {
-    background-position: 90% 0;
-  }
   h1 {
     font-size: 2.5rem;
   }
@@ -511,7 +524,7 @@ h1 {
 }
 
 .reading h3 {
-  margin: 20px 0;
+  margin: 20px 30px;
 }
 
 .readingHeader a {
@@ -525,10 +538,22 @@ h1 {
 
 .readingHeader i {
   color: #fafffe;
-  background: #555f02;
-  border: 10px solid #555f02;
+  position: relative;
+  z-index: 1;
+}
+
+.readingHeader i::after {
+  content: "";
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
-  margin-right: 20px;
+  background-color: #555f02;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .reading p {
@@ -582,7 +607,7 @@ h1 {
 }
 
 .locationsText a {
-  margin-left: 70%;
+  margin-left: 50%;
 }
 
 .programsImg {
@@ -621,7 +646,7 @@ h1 {
   right: -15px;
 }
 
-footer {
+.footer {
   background: #1e140e;
 }
 
@@ -672,6 +697,9 @@ footer h3 {
   .newAdventureImg {
     width: 75%;
   }
+  .locationsText a {
+    margin-left: 50%;
+  }
 }
 
 @media (max-width: 810px) {
@@ -680,6 +708,9 @@ footer h3 {
   }
   .locations {
     margin-right: 50px;
+  }
+  .locationsText a {
+    margin-left: 40%;
   }
 }
 
@@ -788,9 +819,6 @@ footer h3 {
   .furtherReading {
     padding: 50px 0;
   }
-  .reading h3 {
-    margin: 10px 0;
-  }
 }
 
 @media (max-width: 400px) {
@@ -833,13 +861,14 @@ header.blog {
   background-attachment: fixed;
   position: relative;
   min-height: 75vh;
+  background-position: 55% 100%;
 }
 
 .blogHeader {
   font-size: 5.25rem;
   position: absolute;
   top: 10%;
-  left: 15%;
+  left: 8%;
 }
 
 .blogMain {
@@ -849,8 +878,9 @@ header.blog {
 
 .blogImg {
   position: relative;
+  width: calc(100% - 13px);
   top: -50px;
-  left: -12px;
+  left: 0;
   z-index: 1;
 }
 
@@ -862,8 +892,8 @@ header.blog {
   z-index: -1;
   position: absolute;
   top: 15px;
-  left: 31px;
-  width: 98%;
+  left: 15px;
+  width: 100%;
 }
 
 .blogBorder {
@@ -901,19 +931,24 @@ header.blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .commenter h4 {
   font-family: 'Lato', sans-serif;
+  margin: 50px 0;
 }
 
 .commenterText {
   margin-left: 20px;
+  width: 90%;
 }
 
 .commenterImg {
-  width: 100px;
-  height: 100px;
+  width: 10%;
+  margin: 50px 0;
 }
 
 form {
@@ -979,21 +1014,25 @@ textarea {
 textarea::-webkit-input-placeholder {
   color: #fafffe;
   opacity: 1;
+  font-weight: 300;
 }
 
 textarea:-ms-input-placeholder {
   color: #fafffe;
   opacity: 1;
+  font-weight: 300;
 }
 
 textarea::-ms-input-placeholder {
   color: #fafffe;
   opacity: 1;
+  font-weight: 300;
 }
 
 textarea::placeholder {
   color: #fafffe;
   opacity: 1;
+  font-weight: 300;
 }
 
 .blog button {
@@ -1056,6 +1095,13 @@ aside p {
   color: #ffc600;
 }
 
+@media (min-width: 2500px) {
+  header.blog {
+    min-height: 40vh;
+    background-position: 75% 25%;
+  }
+}
+
 @media (max-width: 1070px) {
   header.blog {
     background-position: 50% 50%;
@@ -1066,6 +1112,9 @@ aside p {
 }
 
 @media (max-width: 880px) {
+  .blogHeader {
+    left: 30%;
+  }
   main.blog {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1084,7 +1133,8 @@ aside p {
   }
   .blogImg {
     border: 17px solid #555f02;
-    left: 0;
+    left: -2px;
+    width: calc(100% + 4px);
   }
   .blogBorder {
     border: 2px solid #555f02;
@@ -1094,6 +1144,12 @@ aside p {
   }
   .comments {
     margin-left: 0;
+  }
+  .commenterImg {
+    width: 20%;
+  }
+  .commenterText {
+    width: 80%;
   }
   .blog form {
     margin-left: 0;
@@ -1158,10 +1214,11 @@ aside p {
   .blog .headerNav h3,
   .contact .headerNav h3 {
     display: block;
+    margin-top: 50px;
   }
   .blogHeader {
     font-size: 4.5rem;
-    top: 5%;
+    top: 10%;
   }
 }
 
@@ -1177,6 +1234,31 @@ aside p {
   .blogText h3 {
     font-size: 2rem;
   }
+  .comments h3 {
+    margin: 10px 0;
+  }
+  .commenter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .commenter h4 {
+    margin: 10px 0;
+  }
+  .commenterImg {
+    margin: 0;
+    width: 50%;
+  }
+  .commenterText {
+    width: 100%;
+  }
   .blog aside::after {
     width: 130%;
     height: 100%;
@@ -1187,12 +1269,14 @@ aside p {
   }
 }
 
-body.contact {
+header.contact,
+main.contact,
+footer.contact {
   background: #1e140e;
 }
 
 main.contact {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
 }
 
 header.contact {
@@ -1214,24 +1298,26 @@ header.contact h2 {
   display: flex;
 }
 
-form.contact {
-  background: #262725;
+.formWrapper {
+  max-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   width: 70%;
-  padding: 50px 50px 25px 50px;
-  position: relative;
-  top: -250px;
-  left: 0;
 }
 
-form.contact::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: #ffc600;
-  z-index: -1;
-  position: absolute;
-  top: 15px;
-  left: 15px;
+form.contact {
+  background: #262725;
+  padding: 50px 50px 25px 50px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 15px 15px #ffc600;
+          box-shadow: 15px 15px #ffc600;
 }
 
 .contact input,
@@ -1253,7 +1339,7 @@ form.contact::after {
 }
 
 aside.contact {
-  width: 15%;
+  width: 20%;
 }
 
 aside.contact ul {
@@ -1264,7 +1350,7 @@ aside.contact ul {
 }
 
 aside.contact ul li {
-  padding-right: 20px;
+  padding: 0 10px;
   color: #ffc600;
 }
 
@@ -1276,38 +1362,54 @@ aside.contact p:nth-of-type(1) {
   margin: 10px 0 20px 0;
 }
 
+@media (min-width: 2500px) {
+  header.contact {
+    min-height: 40vh;
+  }
+}
+
 @media (max-width: 1020px) {
+  main.contact {
+    padding: 0;
+  }
   .formAside {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 50px;
+  }
+  .formWrapper {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   aside.contact {
-    position: relative;
-    top: -225px;
-  }
-  aside.contact ul {
+    width: 50%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 30px 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  aside.contact nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.contact {
+    max-height: 75%;
   }
 }
 
 @media (max-width: 755px) {
   main.contact {
-    padding: 50px 0;
-  }
-  header.contact {
-    min-height: 50vh;
-  }
-  form.contact,
-  aside.contact {
-    top: 0;
-  }
-  aside.contact {
-    margin-top: 50px;
-    width: 25%;
+    padding: 150px 0;
   }
   .contact .nameEmail {
     -webkit-box-orient: vertical;
@@ -1325,10 +1427,6 @@ aside.contact p:nth-of-type(1) {
 @media (max-width: 650px) {
   header.contact h2 {
     font-size: 4.5rem;
-  }
-  aside.contact {
-    margin-top: 50px;
-    width: 35%;
   }
 }
 
@@ -1358,6 +1456,8 @@ aside.contact p:nth-of-type(1) {
   form.contact {
     border: 15px solid #ffc600;
     margin: 0 15px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   form.contact::after {
     width: 0;

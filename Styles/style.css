@@ -303,7 +303,7 @@ header h3 {
 }
 
 header p {
-  font-family: 'Dokdo', cursive;
+  font-family: 'Lato', sans-serif;
   color: #fafffe;
   font-size: 3rem;
   margin: 0 0 0 10px;
@@ -528,6 +528,10 @@ h1 {
 
 .reading h3 {
   margin: 20px 30px;
+  border-bottom: 2px solid #1e140e;
+  -webkit-transition: border-bottom 0.75s ease;
+  transition: border-bottom 0.75s ease;
+  width: 100%;
 }
 
 .readingHeader a {
@@ -537,15 +541,10 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.readingHeader a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.readingHeader a:hover h3 {
+  border-bottom: 2px solid #ffc600;
 }
 
 .readingHeader i {
@@ -556,10 +555,11 @@ h1 {
 
 .readingHeader i::after {
   content: "";
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background-color: #555f02;
+  background: repeating-linear-gradient(-45deg, #555f02, #6b7803 1px, #555f02 2px);
   position: absolute;
   z-index: -1;
   top: 50%;

@@ -80,14 +80,16 @@
 
 .reading h3 {
   margin: 20px 30px;
+  border-bottom: 2px solid $backgroundLight;
+  transition: border-bottom 0.75s ease;
+  width: 100%;
 }
 
 .readingHeader a {
   display: flex;
   align-items: center;
-  transition: transform 0.5s ease;
-    &:hover {
-      transform: scale(1.1);
+  &:hover h3 {
+    border-bottom: 2px solid $headerText;
   }
 }
 
@@ -98,10 +100,16 @@
   z-index: 1;
   &::after {
     content: "";
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background-color: $buttonAccent;
+    background: repeating-linear-gradient(
+      -45deg,
+    $buttonAccent,
+    lighten($buttonAccent,5%) 1px,
+    $buttonAccent 2px,
+    );
     position: absolute;
     z-index: -1;
     top: 50%;

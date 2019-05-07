@@ -17,11 +17,10 @@ header.blog {
   background-position: 55% 100%;
 }
 
-.blogHeader {
+.blogHeader h2 {
   font-size: 5.25rem;
-  position: absolute;
-  top: 10%;
-  left:8%;
+  padding: 100px 105px;
+  margin: 0;
 }
 
 .blogMain {
@@ -43,7 +42,6 @@ header.blog {
 }
 
 .blogBorder {
-  // width: calc(100% + 17px);
   border-right: 2px solid $buttonAccent;
   border-bottom: 2px solid $buttonAccent;
 }
@@ -96,6 +94,7 @@ header.blog {
 }
 
 // form styles
+// also partially styles form on contact page
 
 form {
   margin-left: 100px;
@@ -110,7 +109,6 @@ form {
   color: $text;
 }
 
-// also styles form on contact page
 .nameEmail {
   display: flex;
 }
@@ -147,6 +145,7 @@ textarea {
   margin: 50px 0;
 }
 
+// I found this on w3 schools in order to style placeholder text in firefox and chrome
 textarea::placeholder {
   color: $text;
   opacity: 1;
@@ -196,6 +195,7 @@ aside p {
     }
 }
 
+// I found this answer on w3 schools
 .asideLinks li::before {
   content: "•"; 
   color: $headerText;
@@ -208,6 +208,10 @@ aside p {
     min-height: 40vh;
     background-position: 75% 25%;
   }
+
+  .blogHeader h2 {
+    padding: 100px 130px;
+  }
 }
 
 @media (max-width: 1070px) {
@@ -216,19 +220,16 @@ aside p {
   }
 
   .blogImg::after {
-  left: 28px;
-}
+    left: 28px;
+  }
 }
 
 @media (max-width: 880px) {
-  .blogHeader {
-    left: 30%;
-  }
 
   main.blog {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }  
   .blogImg::after {
     width: 0;
@@ -284,13 +285,23 @@ aside p {
     width: 90%;
   }
 
+}
 
+@media (max-width: 705px) {
+  .blogHeader h2 {
+    padding: 50px 0;
+    text-align: center;
+  }
 
 }
 
 @media (max-width: 580px) {
   header.blog {
     background-position: 60% 50%;
+  }
+
+  .blogHeader {
+    left: 20%;
   }
 }
 
@@ -325,15 +336,11 @@ aside p {
     margin-left: 0;
   }
 
-
 }
 
-
 @media (max-width: 410px) {
-  .blogHeader {
-    top: -20%;
-    left: 10%;
-  }
+  
+  // styles both blog and contact page
   .blog .headerNav h3,
   .contact .headerNav h3 {
     display: block;
@@ -342,14 +349,9 @@ aside p {
   }
   .blogHeader {
   font-size: 4.5rem;
-  top: 10%;
-}
+  }
 
 }
-
-
-  
-
 
 @media (max-width: 380px) {
   header.blog {
@@ -358,8 +360,6 @@ aside p {
 
   .blogHeader {
     font-size: 4rem;
-    top: 15%;
-    left: 20%;
   }
 
   .blogText h3 {

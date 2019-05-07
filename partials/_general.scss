@@ -4,12 +4,14 @@ html {
     font-size: 125%;
 }
 
+// I asked Fatima what size the wrapper should be and this is what she said
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
 }
 
+// This is for alignment and the max-width is 80% of the main wrapper
 .wrapperSmall {
   width: 90%;
   max-width: 1152px;
@@ -23,10 +25,6 @@ li {
 a {
 	text-decoration: none;
 	color: inherit;
-}
-
-img {
-	max-width: 100%;
 }
 
 h1,

@@ -1,3 +1,5 @@
+// Header is styled in header partial
+
 // New Adventure Styles
 
 .newAdventure {
@@ -31,7 +33,7 @@
 }
 
 .newAdventureImg::after {
-  @include after ($buttonAccent, 15px, -15px)
+  @include after($buttonAccent, 15px, -15px);
 }
 
   // end of new adventure styles
@@ -83,8 +85,13 @@
 .readingHeader a {
   display: flex;
   align-items: center;
+  transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+  }
 }
 
+// I styled the icon background this way because border did not create a perfect circle
 .readingHeader i {
   color: $text;
   position: relative;
@@ -136,10 +143,12 @@
 
 .programsText {
   padding-right: 100px;
+  width: 100%;
 }
 
 .locationsText {
   padding-left: 100px;
+  width: 100%;
 }
 
 .programsLocations p {
@@ -183,7 +192,7 @@
   right: -15px;
 }
 
-// end of locations programs styles
+// end of programsLocations styles
 
 // beginning of footer styles
 
@@ -199,6 +208,8 @@
 footer h3 {
   margin: 20px 0;
 }
+
+// styles footer copywrite on each page
   
 .copywrite {
   background: $backgroundDark;
@@ -225,7 +236,6 @@ footer h3 {
 
   .newAdventureSmall {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   .newAdventureText {
@@ -276,7 +286,6 @@ footer h3 {
 
   .readingSmall {
     flex-direction: column;
-    flex-wrap: no-wrap;
   }
 
   .reading {
@@ -300,7 +309,7 @@ footer h3 {
     position: static;
   }
 
-  // I asked Fatima and she said changing the partial background to a full border was ok to do for the responsive design
+  // I asked Fatima and she said changing the partial background to a full border was ok to do for the responsive design, so I've done that in several places when I thought it looked better
   .locationsImg::after,
   .programsImg::after {
     height: 0;
@@ -343,6 +352,7 @@ footer h3 {
 
 @media (max-width: 500px) {
 
+
   .newAdventure {
     padding: 50px;
   }
@@ -366,6 +376,7 @@ footer h3 {
     padding: 20px;
   }
 
+  // I took away some of the text here to make it scroll better, because that when the user clicks on the link they will see the full text
   .newAdventureText span {
     display: none;
   }

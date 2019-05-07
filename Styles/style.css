@@ -205,10 +205,6 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -275,6 +271,7 @@ header.main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-transform: uppercase;
 }
 
 header h3 {
@@ -372,7 +369,7 @@ h1 {
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 705px) {
   .headerNav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -388,6 +385,12 @@ h1 {
   }
   nav.menu {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 455px) {
+  h1 {
+    font-size: 4rem;
   }
 }
 
@@ -534,6 +537,15 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.readingHeader a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .readingHeader i {
@@ -592,10 +604,12 @@ h1 {
 
 .programsText {
   padding-right: 100px;
+  width: 100%;
 }
 
 .locationsText {
   padding-left: 100px;
+  width: 100%;
 }
 
 .programsLocations p {
@@ -682,9 +696,6 @@ footer h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -743,8 +754,6 @@ footer h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
   }
   .reading {
     width: 100%;
@@ -864,11 +873,10 @@ header.blog {
   background-position: 55% 100%;
 }
 
-.blogHeader {
+.blogHeader h2 {
   font-size: 5.25rem;
-  position: absolute;
-  top: 10%;
-  left: 8%;
+  padding: 100px 105px;
+  margin: 0;
 }
 
 .blogMain {
@@ -1100,6 +1108,9 @@ aside p {
     min-height: 40vh;
     background-position: 75% 25%;
   }
+  .blogHeader h2 {
+    padding: 100px 130px;
+  }
 }
 
 @media (max-width: 1070px) {
@@ -1112,9 +1123,6 @@ aside p {
 }
 
 @media (max-width: 880px) {
-  .blogHeader {
-    left: 30%;
-  }
   main.blog {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1171,9 +1179,19 @@ aside p {
   }
 }
 
+@media (max-width: 705px) {
+  .blogHeader h2 {
+    padding: 50px 0;
+    text-align: center;
+  }
+}
+
 @media (max-width: 580px) {
   header.blog {
     background-position: 60% 50%;
+  }
+  .blogHeader {
+    left: 20%;
   }
 }
 
@@ -1207,10 +1225,6 @@ aside p {
 }
 
 @media (max-width: 410px) {
-  .blogHeader {
-    top: -20%;
-    left: 10%;
-  }
   .blog .headerNav h3,
   .contact .headerNav h3 {
     display: block;
@@ -1218,7 +1232,6 @@ aside p {
   }
   .blogHeader {
     font-size: 4.5rem;
-    top: 10%;
   }
 }
 
@@ -1228,8 +1241,6 @@ aside p {
   }
   .blogHeader {
     font-size: 4rem;
-    top: 15%;
-    left: 20%;
   }
   .blogText h3 {
     font-size: 2rem;
@@ -1352,6 +1363,15 @@ aside.contact ul {
 aside.contact ul li {
   padding: 0 10px;
   color: #ffc600;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+aside.contact ul li:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 aside.contact p {
@@ -1402,14 +1422,14 @@ aside.contact p:nth-of-type(1) {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main.contact {
-    max-height: 75%;
-  }
 }
 
 @media (max-width: 755px) {
   main.contact {
     padding: 150px 0;
+  }
+  form.contact {
+    padding-top: 20px;
   }
   .contact .nameEmail {
     -webkit-box-orient: vertical;
@@ -1427,6 +1447,8 @@ aside.contact p:nth-of-type(1) {
 @media (max-width: 650px) {
   header.contact h2 {
     font-size: 4.5rem;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -1439,7 +1461,7 @@ aside.contact p:nth-of-type(1) {
     padding: 25px 25px 10px 25px;
   }
   aside.contact {
-    width: 40%;
+    width: 100%;
   }
 }
 
@@ -1450,6 +1472,9 @@ aside.contact p:nth-of-type(1) {
 }
 
 @media (max-width: 415px) {
+  main.contact {
+    padding-bottom: 50px;
+  }
   header.contact h2 {
     font-size: 3rem;
   }
@@ -1468,8 +1493,5 @@ aside.contact p:nth-of-type(1) {
 @media (max-width: 370px) {
   header.contact h2 {
     font-size: 2.5rem;
-  }
-  aside.contact {
-    width: 80%;
   }
 }

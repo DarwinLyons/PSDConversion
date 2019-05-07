@@ -25,9 +25,9 @@ header.contact {
 
 .formAside {
   display: flex;
-  // justify-content: center;
 }
 
+// I did the max-height and display flex in the form wrapper mixed with the position relative in form.contact to get the positioning overtop the background image and the short page size in the deisgn. Asaf helped me come up with this solution.
 .formWrapper {
   max-height: 500px;
   display: flex;
@@ -35,6 +35,7 @@ header.contact {
   width: 70%; 
 }
 
+// I used box shadow here instead of the ::after affect I used in the other instances of this same design because the z-index was interacting with the background image in a weird way. Colin helped me try to fix it but we couldn't, so I changed my method in this instance. 
 form.contact {
   background: $backgroundDark;
   padding: 50px 50px 25px 50px;
@@ -74,7 +75,11 @@ aside.contact ul {
   padding: 0;
   li {
     padding: 0 10px;
-    color: $headerText
+    color: $headerText;
+    transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.5);
+    }
   }
 
 }
@@ -97,10 +102,6 @@ aside.contact p:nth-of-type(1) {
 }
 
 @media (max-width: 1020px) {
-
-  // header.contact {
-  //   min-height: 50vh;
-  // }
 
   main.contact {
     padding: 0;
@@ -127,16 +128,15 @@ aside.contact p:nth-of-type(1) {
     justify-content: center;
     }
   }
-
-
-  main.contact {
-    max-height: 75%;
-  }
 }
 
 @media (max-width: 755px) {
   main.contact {
     padding: 150px 0;
+  }
+
+  form.contact {
+    padding-top: 20px;
   }
 
   .contact .nameEmail {
@@ -154,8 +154,9 @@ aside.contact p:nth-of-type(1) {
 @media (max-width: 650px) {
   header.contact h2 {
     font-size: 4.5rem;
+    margin: 0 auto;
+    text-align: center;
   }
-
 }
 
 @media (max-width: 550px) {
@@ -168,7 +169,7 @@ aside.contact p:nth-of-type(1) {
     padding: 25px 25px 10px 25px;
   }
   aside.contact {
-    width: 40%;
+    width: 100%;
   }
 
 }
@@ -180,6 +181,10 @@ aside.contact p:nth-of-type(1) {
 }
   
 @media (max-width: 415px) {
+  main.contact {
+    padding-bottom: 50px;
+  }
+
   header.contact h2 {
     font-size: 3rem;
   }
@@ -199,9 +204,6 @@ aside.contact p:nth-of-type(1) {
 @media (max-width: 370px) {
   header.contact h2 {
     font-size: 2.5rem;
-  }
-  aside.contact {
-    width: 80%;
   }
 }
   

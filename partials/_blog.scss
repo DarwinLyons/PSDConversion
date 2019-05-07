@@ -135,7 +135,16 @@ form {
   border-top: $backgroundLight;
   border-left: $backgroundLight;
   border-right: $backgroundLight;
+  border-top: 2px solid $backgroundLight;
+  border-left: 2px solid $backgroundLight;
+  border-right: 2px solid $backgroundLight;
   border-bottom: 2px solid $headerText;
+  transition: border 0.5s ease;
+  &:active,
+  &:focus,
+  &:visited {
+    border: 2px solid $headerText; 
+  }
 }
 
 // also styles contact textarea

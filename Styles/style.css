@@ -242,6 +242,19 @@ img {
   display: block;
 }
 
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
 header.main {
   background: url(../assets/candleHeaderBackground.jpg);
   background-size: cover;
@@ -296,6 +309,8 @@ header h3 {
 .menu ul li {
   padding: 0 10px;
   font-weight: bold;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .menu ul li:hover {
@@ -1010,7 +1025,19 @@ form {
   border-top: #1e140e;
   border-left: #1e140e;
   border-right: #1e140e;
+  border-top: 2px solid #1e140e;
+  border-left: 2px solid #1e140e;
+  border-right: 2px solid #1e140e;
   border-bottom: 2px solid #ffc600;
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
+}
+
+.blog input[type="email"]:active, .blog input[type="email"]:focus, .blog input[type="email"]:visited,
+.blog input[type="text"]:active,
+.blog input[type="text"]:focus,
+.blog input[type="text"]:visited {
+  border: 2px solid #ffc600;
 }
 
 textarea {
@@ -1307,6 +1334,9 @@ header.contact h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .formWrapper {
@@ -1343,6 +1373,19 @@ form.contact {
   border-left: #262725;
   border-right: #262725;
   border-bottom: 2px solid #ffc600;
+  border-top: 2px solid #262725;
+  border-left: 2px solid #262725;
+  border-right: 2px solid #262725;
+  border-bottom: 2px solid #ffc600;
+  -webkit-transition: border 0.5s ease;
+  transition: border 0.5s ease;
+}
+
+.contact input[type="text"]:active, .contact input[type="text"]:focus, .contact input[type="text"]:visited,
+.contact input[type="email"]:active,
+.contact input[type="email"]:focus,
+.contact input[type="email"]:visited {
+  border: 2px solid #ffc600;
 }
 
 .contact button {
@@ -1378,8 +1421,14 @@ aside.contact p {
   margin: 0;
 }
 
-aside.contact p:nth-of-type(1) {
+.contactInfo p:first-of-type {
   margin: 10px 0 20px 0;
+}
+
+address {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 2500px) {

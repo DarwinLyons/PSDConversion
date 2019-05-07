@@ -23,14 +23,16 @@ header.contact {
 
 // start of contact form styles
 
+
 .formAside {
   display: flex;
+  justify-content: space-between;
 }
 
 // I did the max-height and display flex in the form wrapper mixed with the position relative in form.contact to get the positioning overtop the background image and the short page size in the deisgn. Asaf helped me come up with this solution.
 .formWrapper {
   max-height: 500px;
-  display: flex;
+  display: flex; 
   align-items: flex-end;
   width: 70%; 
 }
@@ -58,6 +60,16 @@ form.contact {
   border-left: $backgroundDark;
   border-right: $backgroundDark;
   border-bottom: 2px solid $headerText;
+  border-top: 2px solid $backgroundDark;
+  border-left: 2px solid $backgroundDark;
+  border-right: 2px solid $backgroundDark;
+  border-bottom: 2px solid $headerText;
+  transition: border 0.5s ease;
+  &:active,
+  &:focus,
+  &:visited {
+    border: 2px solid $headerText; 
+  }
 }
 
 .contact button {
@@ -88,8 +100,14 @@ aside.contact p {
   margin: 0;
 }
 
-aside.contact p:nth-of-type(1) {
+.contactInfo p:first-of-type {
   margin: 10px 0 20px 0;
+}
+
+address {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 // start of responsive styles

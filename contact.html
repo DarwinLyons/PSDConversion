@@ -10,94 +10,99 @@
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/style.css" />
 </head>
-<body class="contact wrapper">
-  
-  <header class="contact">
-    <div class="headerNav">
-      <h3>Mindn'Soul</h3>
-      <p class="hamburger">
-        <i class="fas fa-bars" title="link to the main menu"></i>
-        <span class="sr-only">Link to main menu</span>
-      </p>
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav><!-- menu -->
-    </div><!-- headerNav -->
-    <div class="contactHeader">
-      <h2 class="wrapperSmall">Get in Touch</h2>
-    </div><!-- blogHeader -->
-  </header><!-- contact -->
+<body class="contact">
+  <div class="wrapper">
 
-  <main class="contact wrapper">
-    <div class="formAside">
-      <div class="formWrapper">
-        <form action="submit" name="contactForm" class="contact wrapperSmall">
-          <div class="nameEmail">
-            <div class="name">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required="true">
-            </div><!-- name -->
-            <div class="email">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" required="true">
-            </div><!-- email -->
-          </div><!-- nameEmail -->
-          <textarea cols="50" rows="10" maxlength="500" placeholder="Message" required="true"></textarea>
-          <button class="more">Submit</button>
-        </form>
-      </div><!-- formWrapper -->
-
-      <aside class="contact wrapperSmall">
-        <nav>
+    <a href="#mainContentContact" class="skipLink">Skip to main content.</a>
+    
+    <header class="contact">
+      <div class="headerNav">
+        <h3>Mindn'Soul</h3>
+        <p class="hamburger">
+          <i class="fas fa-bars" title="link to the main menu"></i>
+          <span class="sr-only">Link to main menu</span>
+        </p>
+        <nav class="menu">
           <ul>
-            <li>
-              <a href="#">
-                <i class="fab fa-facebook-f" aria-hidden="true" title="Link to our facebook">
-                  <span class="sr-only">Link to our facebook</span>
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-instagram" aria-hidden="true" title="Link to our instagram">
-                  <span class="sr-only">Link to our instagram</span>
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-twitter" aria-hidden="true" title="Link to our twitter">
-                  <span class="sr-only">Link to our twitter</span>
-                </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fab fa-whatsapp" aria-hidden="true" title="Link to our whatsapp">
-                  <span class="sr-only">Link to our whatsapp</span>
-                </i>
-              </a>
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-        </nav>
-        <div class="contactInfo wrapper wrapperSmall">
-          <p>info@email.com</p>
-          <p>123-456-7890</p>
-          <p>123 Queen Street West</p>
-          <p>Unit 10</p>
-          <p>Toronto, Ontario</p>
-          <p>M5V2D5</p>
-        </div>
-      </aside>
-    </div><!-- formAside -->
-  </main>
-  <footer>
-    <p class="copywrite">Copywrite &copy 2019 Hacker You</p>
-  </footer>
+        </nav><!-- menu -->
+      </div><!-- headerNav -->
+      <div class="contactHeader">
+        <h2 class="wrapperSmall">Get in Touch</h2>
+      </div><!-- blogHeader -->
+    </header><!-- contact -->
+    
+    <main id="mainContentContact" class="contact">
+      <div class="formAside">
+        <div class="formWrapper">
+          <form action="submit" name="contactForm" class="contact wrapperSmall">
+            <div class="nameEmail">
+              <div class="name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required="true">
+              </div><!-- name -->
+              <div class="email">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required="true">
+              </div><!-- email -->
+            </div><!-- nameEmail -->
+            <textarea cols="50" rows="10" maxlength="500" placeholder="Message" required="true"></textarea>
+            <button class="more">Submit</button>
+          </form>
+        </div><!-- formWrapper -->
+        
+        <aside class="contact wrapperSmall">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook-f" aria-hidden="true" title="Link to our facebook">
+                    <span class="sr-only">Link to our facebook</span>
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-instagram" aria-hidden="true" title="Link to our instagram">
+                    <span class="sr-only">Link to our instagram</span>
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-twitter" aria-hidden="true" title="Link to our twitter">
+                    <span class="sr-only">Link to our twitter</span>
+                  </i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-whatsapp" aria-hidden="true" title="Link to our whatsapp">
+                    <span class="sr-only">Link to our whatsapp</span>
+                  </i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contactInfo wrapperSmall">
+            <p>info@email.com</p>
+            <p>123-456-7890</p>
+            <p>123 Queen Street West</p>
+            <p>Unit 10</p>
+            <p>Toronto, Ontario</p>
+            <p>M5V2D5</p>
+          </div>
+        </aside>
+      </div><!-- formAside -->
+    </main>
+    <footer>
+      <p class="copywrite">Copywrite &copy 2019 Hacker You</p>
+    </footer>
+  </div><!-- wrapper -->
 </body><!-- contact -->
 </html>
+

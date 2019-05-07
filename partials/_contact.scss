@@ -56,21 +56,22 @@ form.contact {
 
 .contact input[type="text"],
 .contact input[type="email"] {
-  border-top: $backgroundDark;
-  border-left: $backgroundDark;
-  border-right: $backgroundDark;
   border-bottom: 2px solid $headerText;
   border-top: 2px solid $backgroundDark;
   border-left: 2px solid $backgroundDark;
   border-right: 2px solid $backgroundDark;
   border-bottom: 2px solid $headerText;
-  transition: border 0.5s ease;
-  &:active,
-  &:focus,
-  &:visited {
+  transition: all 0.5s ease;
+  &:active {
     border: 2px solid $headerText; 
+    box-shadow: 0 0 7px $headerText
   }
 }
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus {
+  border: 2px solid $headerText;
+} 
 
 .contact button {
   border: $buttonAccent;

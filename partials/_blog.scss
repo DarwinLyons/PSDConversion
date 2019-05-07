@@ -132,27 +132,35 @@ form {
 
 .blog input[type="email"],
 .blog input[type="text"] {
-  border-top: $backgroundLight;
-  border-left: $backgroundLight;
-  border-right: $backgroundLight;
   border-top: 2px solid $backgroundLight;
   border-left: 2px solid $backgroundLight;
   border-right: 2px solid $backgroundLight;
   border-bottom: 2px solid $headerText;
-  transition: border 0.5s ease;
-  &:active,
-  &:focus,
-  &:visited {
-    border: 2px solid $headerText; 
+  transition: all 0.5s ease;
+  &:active {
+    border: 2px solid $headerText;
+    box-shadow: 0 0 7px $headerText; 
   }
 }
+
+.blog input[type="email"]:focus,
+.blog input[type="text"]:focus{
+  border: 2px solid $headerText;
+}
+
+
 
 // also styles contact textarea
 textarea {
   border: 2px solid $headerText;
   padding: 40px;
   margin: 50px 0;
+  transition: all 0.5s ease;
+  &:active {
+    box-shadow: 0 0 7px $headerText;
+  }
 }
+
 
 // I found this on w3 schools in order to style placeholder text in firefox and chrome
 textarea::placeholder {

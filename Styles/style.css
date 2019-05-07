@@ -228,6 +228,15 @@ h3 {
   background: #555f02;
   padding: 10px;
   font-size: 1.5rem;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.more:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 nav ul li,
@@ -1022,21 +1031,23 @@ form {
 
 .blog input[type="email"],
 .blog input[type="text"] {
-  border-top: #1e140e;
-  border-left: #1e140e;
-  border-right: #1e140e;
   border-top: 2px solid #1e140e;
   border-left: 2px solid #1e140e;
   border-right: 2px solid #1e140e;
   border-bottom: 2px solid #ffc600;
-  -webkit-transition: border 0.5s ease;
-  transition: border 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.blog input[type="email"]:active, .blog input[type="email"]:focus, .blog input[type="email"]:visited,
-.blog input[type="text"]:active,
-.blog input[type="text"]:focus,
-.blog input[type="text"]:visited {
+.blog input[type="email"]:active,
+.blog input[type="text"]:active {
+  border: 2px solid #ffc600;
+  -webkit-box-shadow: 0 0 7px #ffc600;
+          box-shadow: 0 0 7px #ffc600;
+}
+
+.blog input[type="email"]:focus,
+.blog input[type="text"]:focus {
   border: 2px solid #ffc600;
 }
 
@@ -1044,6 +1055,13 @@ textarea {
   border: 2px solid #ffc600;
   padding: 40px;
   margin: 50px 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+textarea:active {
+  -webkit-box-shadow: 0 0 7px #ffc600;
+          box-shadow: 0 0 7px #ffc600;
 }
 
 textarea::-webkit-input-placeholder {
@@ -1369,22 +1387,24 @@ form.contact {
 
 .contact input[type="text"],
 .contact input[type="email"] {
-  border-top: #262725;
-  border-left: #262725;
-  border-right: #262725;
   border-bottom: 2px solid #ffc600;
   border-top: 2px solid #262725;
   border-left: 2px solid #262725;
   border-right: 2px solid #262725;
   border-bottom: 2px solid #ffc600;
-  -webkit-transition: border 0.5s ease;
-  transition: border 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.contact input[type="text"]:active, .contact input[type="text"]:focus, .contact input[type="text"]:visited,
-.contact input[type="email"]:active,
-.contact input[type="email"]:focus,
-.contact input[type="email"]:visited {
+.contact input[type="text"]:active,
+.contact input[type="email"]:active {
+  border: 2px solid #ffc600;
+  -webkit-box-shadow: 0 0 7px #ffc600;
+          box-shadow: 0 0 7px #ffc600;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus {
   border: 2px solid #ffc600;
 }
 

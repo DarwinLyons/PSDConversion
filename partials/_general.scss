@@ -50,6 +50,10 @@ h3 {
   background: $buttonAccent;
   padding: 10px;
   font-size: 1.5rem;
+  transition: transform 0.5s ease;
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 nav ul li,

@@ -1,6 +1,6 @@
 // styles for the blog page
 
-// header blog styles
+// header blog styles adjusted from the header partial
 
 main.blog {
   display: flex;
@@ -23,6 +23,8 @@ header.blog {
   margin: 0;
 }
 
+// main blog styles
+
 .blogMain {
   background: $backgroundLight;
   max-width: 70%;
@@ -38,7 +40,6 @@ header.blog {
 
 .blogImg::after {
   @include after($buttonAccent, 15px, 15px);
-  width: 100%;
 }
 
 .blogBorder {
@@ -71,7 +72,6 @@ header.blog {
   h3 {
     color: $text;
   }
-  
 }
 
 .commenter {
@@ -132,11 +132,9 @@ form {
 
 .blog input[type="email"],
 .blog input[type="text"] {
-  border-top: 2px solid $backgroundLight;
-  border-left: 2px solid $backgroundLight;
-  border-right: 2px solid $backgroundLight;
+  border: 2px solid $backgroundLight;
   border-bottom: 2px solid $headerText;
-  transition: all 0.5s ease;
+  transition: border 0.5s, box-shadow 0.5s;
   &:active {
     border: 2px solid $headerText;
     box-shadow: 0 0 7px $headerText; 
@@ -148,25 +146,26 @@ form {
   border: 2px solid $headerText;
 }
 
-
-
 // also styles contact textarea
 textarea {
   border: 2px solid $headerText;
   padding: 40px;
   margin: 50px 0;
-  transition: all 0.5s ease;
+  transition: box-shadow 0.5s;
   &:active {
     box-shadow: 0 0 7px $headerText;
   }
 }
 
-
 // I found this on w3 schools in order to style placeholder text in firefox and chrome
 textarea::placeholder {
   color: $text;
   opacity: 1;
-  font-weight: 300; 
+  font-weight: 300;
+}
+
+textarea:focus::placeholder {
+  color: $headerText;
 }
 
 .blog button {
@@ -181,7 +180,7 @@ textarea::placeholder {
   flex-direction: column;
   width: 20%;
   color: $text;
-  margin-top: 50px;
+  margin: 50px 10px 0 0;
   position: relative;
   z-index: 1;
   h5 {
@@ -191,7 +190,7 @@ textarea::placeholder {
 }
 
 .blog aside::after {
-  @include after ($buttonAccent, 15px, -30px);
+  @include after ($buttonAccent, 15px, -25px);
   height: 45%;
   width: 110%;
 }
@@ -205,14 +204,15 @@ aside p {
   }
 
 .asideLinks li {
-    padding-left: 20px;
+    padding-left: 10px;
     font-family: 'Lato', sans-serif;
+    transition: color 0.5s;
     &:hover {
       color: $headerText;
     }
 }
 
-// I found this answer on w3 schools
+// I found this solution on w3 schools
 .asideLinks li::before {
   content: "•"; 
   color: $headerText;
@@ -324,10 +324,6 @@ aside p {
 
 @media (max-width: 485px) {
 
-  .blog h3 {
-    margin-top: 0;
-  }
-
   .blogText {
     margin: 0 20px;
   }
@@ -337,6 +333,7 @@ aside p {
     font-size: 1.5rem;
   }
 
+  // styles both blog and contact page
   .nameEmail {
   flex-direction: column;
   }
@@ -364,10 +361,10 @@ aside p {
     margin-top: 50px;
 
   }
+
   .blogHeader {
   font-size: 4.5rem;
   }
-
 }
 
 @media (max-width: 380px) {

@@ -53,11 +53,11 @@
 
 .galleryImg {
   width: calc(33% - 20px);
-  margin-left: 10px;
+  margin: 0 10px;
 }
 
 .galleryImg:nth-of-type(3) {
-  margin: 0;
+  margin-right: 0;
 }
 
   // end of gallery styles
@@ -81,7 +81,7 @@
 .reading h3 {
   margin: 20px 30px;
   border-bottom: 2px solid $backgroundLight;
-  transition: border-bottom 0.75s ease;
+  transition: border-bottom 0.5s ease;
   width: 100%;
 }
 
@@ -93,7 +93,7 @@
   }
 }
 
-// I styled the icon background this way because border did not create a perfect circle
+// I styled the icon background this way because border did not create a perfect circle, Soo gave me the idea. 
 .readingHeader i {
   color: $text;
   position: relative;
@@ -107,7 +107,7 @@
     background: repeating-linear-gradient(
       -45deg,
     $buttonAccent,
-    lighten($buttonAccent,5%) 1px,
+    lighten($buttonAccent, 5) 1px,
     $buttonAccent 2px,
     );
     position: absolute;
@@ -189,6 +189,7 @@
   left: 0;
 }
 
+// I didn't include the mixin because I needed to style the ::after from the right not the left
 .locationsImg::after {
   content: "";
   height: 100%;
@@ -229,9 +230,6 @@ footer h3 {
 // start of responsive
 
 @media (max-width: 1170px) {
-  .locationsText a {
-    margin-left: 60%;
-  }
 
   .programsText,
   .locationsText {
@@ -324,7 +322,8 @@ footer h3 {
     width: 0;
   }
 
-  .programsImg {
+  .programsImg,
+  .locationsImg {
     order: 1;
     border: 15px solid $headerText;
   } 
@@ -332,11 +331,6 @@ footer h3 {
   .programsText {
     order: 2;
     padding-bottom: 50px;
-  }
-
-  .locationsImg {
-    order: 1;
-    border: 15px solid $headerText;
   }
 
   .locationsText {
@@ -364,10 +358,8 @@ footer h3 {
   .newAdventure {
     padding: 50px;
   }
-  .newAdventureImg {
-    width: 100%;
-  }
 
+  .newAdventureImg,
   .galleryImg {
     width: 100%;
   }
@@ -404,11 +396,3 @@ footer h3 {
   }
 
 }
-
-
-
-
-
-
-
-

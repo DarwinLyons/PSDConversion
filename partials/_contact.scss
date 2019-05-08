@@ -22,9 +22,7 @@ header.contact {
   }
 } 
 
-
 // start of contact form styles
-
 
 .formAside {
   display: flex;
@@ -58,12 +56,9 @@ form.contact {
 
 .contact input[type="text"],
 .contact input[type="email"] {
+  border: 2px solid $backgroundDark;
   border-bottom: 2px solid $headerText;
-  border-top: 2px solid $backgroundDark;
-  border-left: 2px solid $backgroundDark;
-  border-right: 2px solid $backgroundDark;
-  border-bottom: 2px solid $headerText;
-  transition: all 0.5s ease;
+  transition: all 0.5s;
   &:active {
     border: 2px solid $headerText; 
     box-shadow: 0 0 7px $headerText
@@ -103,7 +98,7 @@ aside.contact p {
   margin: 0;
 }
 
-.contactInfo p:first-of-type {
+.contactInfo > p:first-of-type {
   margin: 10px 0 20px 0;
 }
 
@@ -160,6 +155,10 @@ address {
 }
 
 @media (max-width: 755px) {
+  header.contact h2 {
+    padding-bottom: 160px;
+  }
+
   main.contact {
     padding: 150px 0;
   }
@@ -224,11 +223,6 @@ address {
     margin: 0 15px;
     box-shadow: none;
   }
-
-  form.contact::after {
-    width: 0;
-    height: 0;
-  }
 }
 
 @media (max-width: 370px) {
@@ -236,7 +230,3 @@ address {
     font-size: 2.5rem;
   }
 }
-  
-
-
-

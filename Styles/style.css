@@ -152,15 +152,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 0;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -228,10 +219,19 @@ h3 {
   background: #555f02;
   padding: 10px;
   font-size: 1.5rem;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+  transition: color 0.5s, -webkit-transform 0.5s;
+  transition: color 0.5s, transform 0.5s;
+  transition: color 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.more:hover {
+  color: #ffc600;
+}
+
+.more:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 nav ul li,
@@ -363,7 +363,8 @@ h1 {
 
 @media (max-width: 930px) {
   header.main {
-    background-position: 60% 0;
+    background-position: 80% 0;
+    min-height: 60vh;
   }
   .headerMain {
     bottom: 15%;
@@ -524,11 +525,11 @@ h1 {
 
 .galleryImg {
   width: calc(33% - 20px);
-  margin-left: 10px;
+  margin: 0 10px;
 }
 
 .galleryImg:nth-of-type(3) {
-  margin: 0;
+  margin-right: 0;
 }
 
 .furtherReading {
@@ -551,8 +552,8 @@ h1 {
 .reading h3 {
   margin: 20px 30px;
   border-bottom: 2px solid #1e140e;
-  -webkit-transition: border-bottom 0.75s ease;
-  transition: border-bottom 0.75s ease;
+  -webkit-transition: border-bottom 0.5s ease;
+  transition: border-bottom 0.5s ease;
   width: 100%;
 }
 
@@ -703,9 +704,6 @@ footer h3 {
 }
 
 @media (max-width: 1170px) {
-  .locationsText a {
-    margin-left: 60%;
-  }
   .programsText,
   .locationsText {
     padding: 0;
@@ -801,7 +799,8 @@ footer h3 {
     height: 0;
     width: 0;
   }
-  .programsImg {
+  .programsImg,
+  .locationsImg {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -812,12 +811,6 @@ footer h3 {
         -ms-flex-order: 2;
             order: 2;
     padding-bottom: 50px;
-  }
-  .locationsImg {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    border: 15px solid #ffc600;
   }
   .locationsText {
     -webkit-box-ordinal-group: 3;
@@ -841,9 +834,7 @@ footer h3 {
   .newAdventure {
     padding: 50px;
   }
-  .newAdventureImg {
-    width: 100%;
-  }
+  .newAdventureImg,
   .galleryImg {
     width: 100%;
   }
@@ -923,7 +914,6 @@ header.blog {
   position: absolute;
   top: 15px;
   left: 15px;
-  width: 100%;
 }
 
 .blogBorder {
@@ -1029,12 +1019,12 @@ form {
 
 .blog input[type="email"],
 .blog input[type="text"] {
-  border-top: 2px solid #1e140e;
-  border-left: 2px solid #1e140e;
-  border-right: 2px solid #1e140e;
+  border: 2px solid #1e140e;
   border-bottom: 2px solid #ffc600;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: border 0.5s, -webkit-box-shadow 0.5s;
+  transition: border 0.5s, -webkit-box-shadow 0.5s;
+  transition: border 0.5s, box-shadow 0.5s;
+  transition: border 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 .blog input[type="email"]:active,
@@ -1053,8 +1043,10 @@ textarea {
   border: 2px solid #ffc600;
   padding: 40px;
   margin: 50px 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 
 textarea:active {
@@ -1086,6 +1078,22 @@ textarea::placeholder {
   font-weight: 300;
 }
 
+textarea:focus::-webkit-input-placeholder {
+  color: #ffc600;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: #ffc600;
+}
+
+textarea:focus::-ms-input-placeholder {
+  color: #ffc600;
+}
+
+textarea:focus::placeholder {
+  color: #ffc600;
+}
+
 .blog button {
   border: #555f02;
   margin-bottom: 100px;
@@ -1101,7 +1109,7 @@ textarea::placeholder {
           flex-direction: column;
   width: 20%;
   color: #fafffe;
-  margin-top: 50px;
+  margin: 50px 10px 0 0;
   position: relative;
   z-index: 1;
 }
@@ -1119,7 +1127,7 @@ textarea::placeholder {
   z-index: -1;
   position: absolute;
   top: 15px;
-  left: -30px;
+  left: -25px;
   height: 45%;
   width: 110%;
 }
@@ -1133,8 +1141,10 @@ aside p {
 }
 
 .asideLinks li {
-  padding-left: 20px;
+  padding-left: 10px;
   font-family: 'Lato', sans-serif;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .asideLinks li:hover {
@@ -1239,9 +1249,6 @@ aside p {
 }
 
 @media (max-width: 485px) {
-  .blog h3 {
-    margin-top: 0;
-  }
   .blogText {
     margin: 0 20px;
   }
@@ -1387,13 +1394,10 @@ form.contact {
 
 .contact input[type="text"],
 .contact input[type="email"] {
+  border: 2px solid #262725;
   border-bottom: 2px solid #ffc600;
-  border-top: 2px solid #262725;
-  border-left: 2px solid #262725;
-  border-right: 2px solid #262725;
-  border-bottom: 2px solid #ffc600;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .contact input[type="text"]:active,
@@ -1441,7 +1445,7 @@ aside.contact p {
   margin: 0;
 }
 
-.contactInfo p:first-of-type {
+.contactInfo > p:first-of-type {
   margin: 10px 0 20px 0;
 }
 
@@ -1502,6 +1506,9 @@ address {
 }
 
 @media (max-width: 755px) {
+  header.contact h2 {
+    padding-bottom: 160px;
+  }
   main.contact {
     padding: 150px 0;
   }
@@ -1560,10 +1567,6 @@ address {
     margin: 0 15px;
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
-  form.contact::after {
-    width: 0;
-    height: 0;
   }
 }
 

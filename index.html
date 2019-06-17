@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mindn'Soul</title>
-  <link href="https://fonts.googleapis.com/css?family=Dokdo|Lato:300,400,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster+two|Lato:300,400,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="Styles/style.css"/>
+  <link rel="stylesheet" href="">
 </head>
 <body>
   <div class="wrapper">
@@ -16,18 +18,22 @@
     <a href="#mainContentIndex" class="skipLink">Skip to main content.</a>
     <header class="main">
       <div class="headerNav">
-        <h3>Mindn'Soul Hello</h3>
-        <p class="hamburger">
-          <i class="fas fa-bars" aria-hidden="true" title="link to the main menu"></i>
-          <span class="sr-only">Link to main menu</span>
-        </p>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <h3>Mindn'Soul</h3>
+        <div id="toggle" class="toggle">
+          <p class="hamburger">
+            <i class="fas fa-bars" aria-hidden="true" title="link to the main menu"></i>
+            <span class="sr-only">Link to main menu</span>
+          </p>
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <i class="fas fa-times"></i>
+
+        </div>
         </nav><!-- menu -->
       </div><!-- headerNav -->
       
@@ -65,10 +71,10 @@
           <figure class="galleryImg">
             <img src="assets/headstandGallery.jpg" alt="A woman doing a cross legged headstand near a temple.">
           </figure><!-- galleryImg -->
-          <figure class="galleryImg">
+          <figure class="galleryImg mobile">
             <img src="assets/partneredPoseGallery.jpg" alt="A man lyning on the ground balancing a woman in a yoga pose set against a sunset.">
           </figure><!-- galleryImg -->
-          <figure class="galleryImg">
+          <figure class="galleryImg mobile">
             <img src="assets/meditationGallery.jpg" alt="A woman sitting on a beach in the waves meditating.">
           </figure><!-- galleryImg -->
         </div><!-- wrapperSmall gallerySmall -->
@@ -161,5 +167,7 @@
     </footer>
       
   </div><!-- wrapper -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -7,13 +7,36 @@ header.main {
 
 .hamburger {
   color: $text; 
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 14%;
-  visibility: hidden;
+  left: 0;
+  display: none;
   font-size: 2rem;
   padding: 10px;
+  z-index: 999;
 }
+
+.fa-times {
+  color: $backgroundDark;
+  display: none;
+  padding: 40% 10px 0 0;
+}
+
+.show.menu {
+  display: flex;
+  position: fixed;
+  background: $text;
+  color: $backgroundDark;
+	z-index: 999;
+}
+
+.show.fa-times {
+  display: block;
+}
+
+// .toggle {
+//   display: block;
+// }
 
 // styles each page's nav
 
@@ -31,6 +54,7 @@ header h3 {
 }
 
 .menu {
+  display: flex;
   margin-right: 10%;
     ul {
       display: flex;
@@ -152,7 +176,7 @@ h1 {
   .headerMain {
     padding-top: 0;
   }
-  // Fatima said I could get rid of the image at this stage
+ 
   .headerImg {
     visibility: hidden
   }
@@ -175,17 +199,37 @@ h1 {
     min-height: 75vh;
   }
 
-// This is set to display none because there is screen reader text in the hamburger to direct people to the menu
   .headerNav h3 {
     display: none;
   }
 
+  //menu
   .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
   }
 
+  .menu ul {
+    margin-top: 50px;
+    flex-direction: column;
+    text-align: left;
+    li {
+      color: $backgroundDark;
+    }
+  }
+
+  .fa-times {
+
+  }
+
+  .headerNav {
+    align-items: flex-start;
+  }
+
   .hamburger {
-    visibility: visible;
+    display: block;
   }
 
 }

@@ -2,6 +2,7 @@
 
 html {
     font-size: 125%;
+    scroll-behavior: smooth;
 }
 
 // I asked Fatima what size the wrapper should be and this is what she said
@@ -38,7 +39,7 @@ h1,
 h2,
 h3,
 .more {
-  font-family: 'Dokdo', cursive; 
+  font-family: 'Lobster Two', cursive; 
 }
 
 h3 {
@@ -85,3 +86,9 @@ img {
 .skipLink:focus {
   left: 0;
 }  
+
+@media (max-width: 440px) {
+  .wrapperSmall {
+    width: 95%;
+  }
+}

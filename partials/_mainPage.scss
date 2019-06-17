@@ -368,6 +368,18 @@ footer h3 {
     padding: 50px 0;
   }
 
+  .mobile {
+    display: none;
+  }
+
+  .newAdventureImg {
+    order: 1;
+  }
+
+  .newAdventureText {
+    order: 2;
+  }
+
 }
 
 @media (max-width: 400px) {

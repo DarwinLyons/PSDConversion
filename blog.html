@@ -19,18 +19,22 @@
     <header class="blog">
       <div class="headerNav">
         <h3>Mindn'Soul</h3>
-        <p class="hamburger">
-          <i class="fas fa-bars" title="link to the main menu"></i>
-          <span class="sr-only">Link to main menu</span>
-        </p>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav><!-- menu -->
+        <div id="toggle" class="toggle">
+          <p class="hamburger">
+            <i class="fas fa-bars" aria-hidden="true" title="link to the main menu"></i>
+            <span class="sr-only">Link to main menu</span>
+          </p>
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <i class="fas fa-times"></i>
+          </nav><!-- menu -->
+        
+        </div>
       </div><!-- headerNav -->
       <div class="blogHeader">
         <h2>Blog</h2>
@@ -124,5 +128,8 @@
       <p class="copywrite">Copywrite &copy 2019 Hacker You</p>
     </footer>
   </div><!-- wrapper -->
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'
+  integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+<script src="script.js"></script>
 </body>
 </html>

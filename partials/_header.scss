@@ -10,7 +10,7 @@ header.main {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  opacity: 0;
   font-size: 2rem;
   padding: 10px;
   z-index: 999;
@@ -19,24 +19,27 @@ header.main {
 .fa-times {
   color: $backgroundDark;
   display: none;
-  padding: 40% 10px 0 0;
+  padding: 10% 10px 0 0;
+  transition: all 0.3s;
 }
 
 .show.menu {
   display: flex;
+  justify-content: center;
+  width: 100%;
   position: fixed;
-  background: $text;
+  background: rgba(250,255,238,1);
   color: $backgroundDark;
-	z-index: 999;
+  opacity: 1;
+  z-index: 999;
+  transition: all 0.3s;
 }
 
 .show.fa-times {
+  opacity: 1;
   display: block;
 }
 
-// .toggle {
-//   display: block;
-// }
 
 // styles each page's nav
 
@@ -56,6 +59,7 @@ header h3 {
 .menu {
   display: flex;
   margin-right: 10%;
+  transition: opacity 0.3s;
     ul {
       display: flex;
       justify-content: space-between;
@@ -208,7 +212,8 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    opacity: 0;
+    width: 50%;
   }
 
   .menu ul {
@@ -217,10 +222,12 @@ h1 {
     text-align: left;
     li {
       color: $backgroundDark;
+      margin: 10px 0;
     }
   }
 
   .fa-times {
+    opacity: 0;
 
   }
 
@@ -229,7 +236,7 @@ h1 {
   }
 
   .hamburger {
-    display: block;
+    opacity: 1;
   }
 
 }

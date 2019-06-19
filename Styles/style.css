@@ -201,7 +201,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 h1,
@@ -217,7 +217,7 @@ h3 {
 
 .more {
   color: #fafffe;
-  background: #2f6690;
+  background: #3d7068;
   padding: 10px;
   font-size: 1.5rem;
   -webkit-transition: color 0.5s, -webkit-transform 0.5s;
@@ -227,7 +227,7 @@ h3 {
 }
 
 .more:hover {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 .more:active {
@@ -280,29 +280,39 @@ header.main {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  opacity: 0;
   font-size: 2rem;
   padding: 10px;
   z-index: 999;
 }
 
 .fa-times {
-  color: #262725;
+  color: #04151f;
   display: none;
-  padding: 40% 10px 0 0;
+  padding: 10% 10px 0 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .show.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   position: fixed;
-  background: #fafffe;
-  color: #262725;
+  background: #faffee;
+  color: #04151f;
+  opacity: 1;
   z-index: 999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .show.fa-times {
+  opacity: 1;
   display: block;
 }
 
@@ -329,6 +339,8 @@ header h3 {
   display: -ms-flexbox;
   display: flex;
   margin-right: 10%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .menu ul {
@@ -349,7 +361,7 @@ header h3 {
 }
 
 .menu ul li:hover {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 header p {
@@ -476,7 +488,8 @@ h1 {
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    opacity: 0;
+    width: 50%;
   }
   .menu ul {
     margin-top: 50px;
@@ -487,7 +500,11 @@ h1 {
     text-align: left;
   }
   .menu ul li {
-    color: #262725;
+    color: #04151f;
+    margin: 10px 0;
+  }
+  .fa-times {
+    opacity: 0;
   }
   .headerNav {
     -webkit-box-align: start;
@@ -495,7 +512,7 @@ h1 {
             align-items: flex-start;
   }
   .hamburger {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -509,7 +526,7 @@ h1 {
 }
 
 .newAdventure {
-  background: #1e140e;
+  background: #1d282d;
   padding: 100px;
 }
 
@@ -551,7 +568,7 @@ h1 {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #2f6690;
+  background-color: #3d7068;
   z-index: -1;
   position: absolute;
   top: 15px;
@@ -559,7 +576,7 @@ h1 {
 }
 
 .gallery {
-  background: #262725;
+  background: #04151f;
   padding: 100px 0;
   width: 100%;
 }
@@ -583,7 +600,7 @@ h1 {
 }
 
 .furtherReading {
-  background: #1e140e;
+  background: #1d282d;
   padding: 100px 0;
 }
 
@@ -601,7 +618,7 @@ h1 {
 
 .reading h3 {
   margin: 20px 30px;
-  border-bottom: 2px solid #1e140e;
+  border-bottom: 2px solid #1d282d;
   -webkit-transition: border-bottom 0.5s ease;
   transition: border-bottom 0.5s ease;
   width: 100%;
@@ -617,7 +634,7 @@ h1 {
 }
 
 .readingHeader a:hover h3 {
-  border-bottom: 2px solid #edae49;
+  border-bottom: 2px solid #e9ce2c;
 }
 
 .readingHeader i {
@@ -631,8 +648,8 @@ h1 {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: #2f6690;
-  background: repeating-linear-gradient(-45deg, #2f6690, #3574a3 1px, #2f6690 2px);
+  background-color: #3d7068;
+  background: repeating-linear-gradient(-45deg, #3d7068, #468177 1px, #3d7068 2px);
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -646,7 +663,7 @@ h1 {
 }
 
 .programsLocations {
-  background: #262725;
+  background: #04151f;
 }
 
 .programsLocationsSmall {
@@ -708,7 +725,7 @@ h1 {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #edae49;
+  background-color: #e9ce2c;
   z-index: -1;
   position: absolute;
   top: 15px;
@@ -726,7 +743,7 @@ h1 {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #edae49;
+  background-color: #e9ce2c;
   z-index: -1;
   position: absolute;
   top: 15px;
@@ -734,7 +751,7 @@ h1 {
 }
 
 .footer {
-  background: #1e140e;
+  background: #1d282d;
 }
 
 .footerText {
@@ -747,7 +764,7 @@ footer h3 {
 }
 
 .copywrite {
-  background: #262725;
+  background: #04151f;
   text-align: center;
   padding: 10px 0;
   margin: 0 auto;
@@ -813,7 +830,7 @@ footer h3 {
     content: "";
     height: 100%;
     width: 100%;
-    background-color: #edae49;
+    background-color: #e9ce2c;
     z-index: -1;
     position: absolute;
     top: 15px;
@@ -854,7 +871,7 @@ footer h3 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    border: 15px solid #edae49;
+    border: 15px solid #e9ce2c;
   }
   .programsText {
     -webkit-box-ordinal-group: 3;
@@ -914,10 +931,10 @@ footer h3 {
     display: none;
   }
   .newAdventureImg {
-    border: 15px solid #2f6690;
+    border: 15px solid #3d7068;
   }
   .galleryImg {
-    border: 15px solid #edae49;
+    border: 15px solid #e9ce2c;
   }
   .newAdventureImg::after,
   .galleryImg::after {
@@ -936,7 +953,7 @@ main.blog {
 }
 
 .blog {
-  background: #1e140e;
+  background: #1d282d;
 }
 
 header.blog {
@@ -956,7 +973,7 @@ header.blog {
 }
 
 .blogMain {
-  background: #1e140e;
+  background: #1d282d;
   max-width: 70%;
 }
 
@@ -972,7 +989,7 @@ header.blog {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #2f6690;
+  background-color: #3d7068;
   z-index: -1;
   position: absolute;
   top: 15px;
@@ -980,8 +997,8 @@ header.blog {
 }
 
 .blogBorder {
-  border-right: 2px solid #2f6690;
-  border-bottom: 2px solid #2f6690;
+  border-right: 2px solid #3d7068;
+  border-bottom: 2px solid #3d7068;
 }
 
 .blogText {
@@ -1048,7 +1065,7 @@ form {
 
 .blog input,
 .blog textarea {
-  background: #1e140e;
+  background: #1d282d;
   color: #fafffe;
 }
 
@@ -1082,8 +1099,8 @@ form {
 
 .blog input[type="email"],
 .blog input[type="text"] {
-  border: 2px solid #1e140e;
-  border-bottom: 2px solid #edae49;
+  border: 2px solid #1d282d;
+  border-bottom: 2px solid #e9ce2c;
   -webkit-transition: border 0.5s, -webkit-box-shadow 0.5s;
   transition: border 0.5s, -webkit-box-shadow 0.5s;
   transition: border 0.5s, box-shadow 0.5s;
@@ -1092,18 +1109,18 @@ form {
 
 .blog input[type="email"]:active,
 .blog input[type="text"]:active {
-  border: 2px solid #edae49;
-  -webkit-box-shadow: 0 0 7px #edae49;
-          box-shadow: 0 0 7px #edae49;
+  border: 2px solid #e9ce2c;
+  -webkit-box-shadow: 0 0 7px #e9ce2c;
+          box-shadow: 0 0 7px #e9ce2c;
 }
 
 .blog input[type="email"]:focus,
 .blog input[type="text"]:focus {
-  border: 2px solid #edae49;
+  border: 2px solid #e9ce2c;
 }
 
 textarea {
-  border: 2px solid #edae49;
+  border: 2px solid #e9ce2c;
   padding: 40px;
   margin: 50px 0;
   -webkit-transition: -webkit-box-shadow 0.5s;
@@ -1113,8 +1130,8 @@ textarea {
 }
 
 textarea:active {
-  -webkit-box-shadow: 0 0 7px #edae49;
-          box-shadow: 0 0 7px #edae49;
+  -webkit-box-shadow: 0 0 7px #e9ce2c;
+          box-shadow: 0 0 7px #e9ce2c;
 }
 
 textarea::-webkit-input-placeholder {
@@ -1142,23 +1159,23 @@ textarea::placeholder {
 }
 
 textarea:focus::-webkit-input-placeholder {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 textarea:focus:-ms-input-placeholder {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 textarea:focus::-ms-input-placeholder {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 textarea:focus::placeholder {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 .blog button {
-  border: #2f6690;
+  border: #3d7068;
   margin-bottom: 100px;
 }
 
@@ -1186,7 +1203,7 @@ textarea:focus::placeholder {
   content: "";
   height: 100%;
   width: 100%;
-  background-color: #2f6690;
+  background-color: #3d7068;
   z-index: -1;
   position: absolute;
   top: 15px;
@@ -1211,12 +1228,12 @@ aside p {
 }
 
 .asideLinks li:hover {
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 .asideLinks li::before {
   content: "•";
-  color: #edae49;
+  color: #e9ce2c;
 }
 
 @media (min-width: 2500px) {
@@ -1256,12 +1273,12 @@ aside p {
     height: 0;
   }
   .blogImg {
-    border: 17px solid #2f6690;
+    border: 17px solid #3d7068;
     left: -2px;
     width: calc(100% + 4px);
   }
   .blogBorder {
-    border: 2px solid #2f6690;
+    border: 2px solid #3d7068;
   }
   .blogText {
     margin: 0 50px;
@@ -1338,11 +1355,6 @@ aside p {
 }
 
 @media (max-width: 410px) {
-  .blog .headerNav h3,
-  .contact .headerNav h3 {
-    display: block;
-    margin-top: 50px;
-  }
   .blogHeader {
     font-size: 4.5rem;
   }
@@ -1396,7 +1408,7 @@ aside p {
 header.contact,
 main.contact,
 footer.contact {
-  background: #1e140e;
+  background: #1d282d;
 }
 
 main.contact {
@@ -1439,44 +1451,44 @@ header.contact h2 {
 }
 
 form.contact {
-  background: #262725;
+  background: #04151f;
   padding: 50px 50px 25px 50px;
   position: relative;
   bottom: 0;
   left: 0;
   margin-bottom: 50px;
-  -webkit-box-shadow: 15px 15px #edae49;
-          box-shadow: 15px 15px #edae49;
+  -webkit-box-shadow: 15px 15px #e9ce2c;
+          box-shadow: 15px 15px #e9ce2c;
 }
 
 .contact input,
 .contact textarea {
-  background: #262725;
+  background: #04151f;
   color: #fafffe;
 }
 
 .contact input[type="text"],
 .contact input[type="email"] {
-  border: 2px solid #262725;
-  border-bottom: 2px solid #edae49;
+  border: 2px solid #04151f;
+  border-bottom: 2px solid #e9ce2c;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .contact input[type="text"]:active,
 .contact input[type="email"]:active {
-  border: 2px solid #edae49;
-  -webkit-box-shadow: 0 0 7px #edae49;
-          box-shadow: 0 0 7px #edae49;
+  border: 2px solid #e9ce2c;
+  -webkit-box-shadow: 0 0 7px #e9ce2c;
+          box-shadow: 0 0 7px #e9ce2c;
 }
 
 .contact input[type="text"]:focus,
 .contact input[type="email"]:focus {
-  border: 2px solid #edae49;
+  border: 2px solid #e9ce2c;
 }
 
 .contact button {
-  border: #2f6690;
+  border: #3d7068;
 }
 
 aside.contact {
@@ -1492,7 +1504,7 @@ aside.contact ul {
 
 aside.contact ul li {
   padding: 0 10px;
-  color: #edae49;
+  color: #e9ce2c;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -1621,12 +1633,18 @@ address {
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 410px) {
+  .headerNav h3 {
+    display: none;
+  }
+  header.contact h2 {
+    padding-top: 120px;
+  }
   header.contact h2 {
     font-size: 3rem;
   }
   form.contact {
-    border: 15px solid #edae49;
+    border: 15px solid #e9ce2c;
     margin: 0 15px;
     -webkit-box-shadow: none;
             box-shadow: none;

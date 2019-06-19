@@ -212,7 +212,15 @@ address {
   }
 }
   
-@media (max-width: 415px) {
+@media (max-width: 410px) {
+
+  .headerNav h3 {
+    display: none;
+  }
+
+  header.contact h2 {
+    padding-top: 120px;
+}
 
   header.contact h2 {
     font-size: 3rem;

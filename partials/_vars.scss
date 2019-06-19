@@ -1,7 +1,11 @@
-$headerText: #edae49;
-$buttonAccent:#2f6690;
-$backgroundDark: #262725;
-$backgroundLight: #1e140e;
+// $headerText: #edae49;
+$headerText: #e9ce2c;
+// $buttonAccent:#2f6690;
+$buttonAccent: #3d7068;
+// $backgroundDark: #262725;
+$backgroundDark: #04151f;
+// $backgroundLight: #1e140e;
+$backgroundLight: #1d282d;
 $text: #fafffe;
 
 @mixin background($background) {
